@@ -23,15 +23,19 @@ if __name__ == "__main__":
             preprocessor = Preprocessor(config['preprocessing'], logger)
             data_x, data_y, train_x, train_y, validate_x, validate_y, test_x = preprocessor.process()
 
+            if config['training']['model_name'] != 'naivebayse':
+                config['training']['vocab_size'] = len(preprocessor.word2ind.keys())
+
             trainer = Trainer(config['training'], logger, preprocessor.classes)
-            dev_model = trainer.fit(train_x, train_y)  # deve model
+            # dev_model = trainer.fit(train_x, train_y)  # deve model
+
+            full_model = trainer.fit(data_x, data_y)
 
             accuracy, cls_report = trainer.validate(validate_x, validate_y)
             logger.info("accuracy:{}".format(accuracy))
             logger.info("\n{}\n".format(cls_report))
 
-
-            predictor = Predictor(config['predict'],logger, dev_model)
+            predictor = Predictor(config['predict'],logger, full_model)
             probs = predictor.predict_prob(test_x)
             result = predictor.save_result(preprocessor.test_ids, probs)
 

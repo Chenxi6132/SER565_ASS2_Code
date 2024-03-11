@@ -4,14 +4,14 @@ preprocessing:
   input_testset: ./data/test.csv
   random_seed: 0
   classes:
-  - Functionality_Test_Case
-  - User_Interface_Test_Case
-  - Performance_Test_Case
-  - Integration_Test_Case
-  - Usability_Test_Case
-  - Database_Test_Case
-  - Security_Test_Case
-  - User_Acceptance_Test_Case
+    - 'Functionality_Test_Case'
+    - 'User_Interface_Test_Case'
+    - 'Performance_Test_Case'
+    - 'Integration_Test_Case'
+    - 'Usability_Test_Case'
+    - 'Database_Test_Case'
+    - 'Security_Test_Case'
+    - 'User_Acceptance_Test_Case'
   input_text_column: Descrption
   input_id_column: Test_ID
   maxlen: 128
@@ -38,11 +38,11 @@ predict:
   calibrators_output_path: ./output
   debug_validation: false
   classes:
-  - Functionality_Test_Case
-  - User_Interface_Test_Case
-  - Performance_Test_Case
-  - Integration_Test_Case
-  - Usability_Test_Case
-  - Database_Test_Case
-  - Security_Test_Case
-  - User_Acceptance_Test_Case
+    - 'Functionality_Test_Case'
+    - 'User_Interface_Test_Case'
+    - 'Performance_Test_Case'
+    - 'Integration_Test_Case'
+    - 'Usability_Test_Case'
+    - 'Database_Test_Case'
+    - 'Security_Test_Case'
+    - 'User_Acceptance_Test_Case'

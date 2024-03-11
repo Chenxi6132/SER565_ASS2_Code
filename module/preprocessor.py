@@ -1,6 +1,8 @@
 import re
 import string
 import pandas as pd
+import numpy as np
+from tensorflow import keras
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -59,13 +61,61 @@ class Preprocessor(object):
             self.validate_x, self.validate_y, self.test_x
 
         if input_convertor == 'count_vectorization':
-            train_x, validate_x, test_x = self.count_vectorization(train_x, validate_x, test_x)
+            data_x, validate_x, test_x = self.count_vectorization(data_x, validate_x, test_x)
+        elif input_convertor == 'nn_vectorization':
+            data_x, validate_x, test_x = self.nn_vectorization(data_x, validate_x, test_x)
 
         return data_x, data_y, train_x, train_y, validate_x, validate_y, test_x
 
-    def count_vectorization(self, train_x, validate_x, test_x):
+    def count_vectorization(self, data_x, validate_x, test_x):
         vectorizer = CountVectorizer(tokenizer=lambda x:x, preprocessor=lambda x:x)
-        vectorized_train_x = vectorizer.fit_transform(train_x)
+        vectorized_data_x = vectorizer.fit_transform(data_x)
         vectorized_validate_x = vectorizer.transform(validate_x)
         vectorized_test_x  = vectorizer.transform(test_x)
-        return vectorized_train_x, vectorized_validate_x, vectorized_test_x
+        return vectorized_data_x, vectorized_validate_x, vectorized_test_x
+
+    def nn_vectorization(self, data_x, validate_x, test_x):
+        self.word2ind = {}
+        self.ind2word = {}
+        specialtokens = ['<pad>', '<unk>']
+
+        def addword(word2ind, ind2word, word):
+            if word in word2ind:
+                return
+            ind2word[len(word2ind)] = word
+            word2ind[word] = len(word2ind)
+
+        for token in specialtokens:
+            addword(self.word2ind, self.ind2word, token)
+
+        for sent in data_x:
+            for word in sent:
+                addword(self.word2ind, self.ind2word, word)
+
+        data_x_ids = []
+        for sent in data_x:
+            indsent = [self.word2ind.get(i, self.word2ind['<unk>']) for i in sent]
+            data_x_ids.append(indsent)
+
+        validate_x_ids = []
+        for sent in validate_x:
+            indsent = [self.word2ind.get(i, self.word2ind['<unk>']) for i in sent]
+            validate_x_ids.append(indsent)
+
+        test_x_ids = []
+        for sent in test_x:
+            indsent = [self.word2ind.get(i, self.word2ind['<unk>']) for i in sent]
+            test_x_ids.append(indsent)
+
+        data_x_ids = keras.preprocessing.sequence.pad_sequences(data_x_ids, maxlen=self.config['maxlen'],
+                                                                padding='post', value=self.word2ind['<pad>'])
+        validate_x_ids = keras.preprocessing.sequence.pad_sequences(validate_x_ids, maxlen=self.config['maxlen'],
+                                                                    padding='post', value=self.word2ind['<pad>'])
+        test_x_ids = keras.preprocessing.sequence.pad_sequences(test_x_ids, maxlen=self.config['maxlen'],
+                                                                padding='post', value=self.word2ind['<pad>'])
+
+        data_x_ids = np.array(data_x_ids)
+        validate_x_ids = np.array(validate_x_ids)
+        test_x_ids = np.array(test_x_ids)
+
+        return data_x_ids, validate_x_ids, test_x_ids

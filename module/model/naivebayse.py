@@ -11,10 +11,10 @@ class NaiveBayer(object):
             model = MultinomialNB()
             self.models[cls] = model
 
-    def fit(self, train_x, train_y):
+    def fit(self, data_x, data_y):
         for idx, cls in enumerate(self.classes):
-            class_labels = train_y[:, idx]
-            self.models[cls].fit(train_x, class_labels)
+            class_labels = data_y[:, idx]
+            self.models[cls].fit(data_x, class_labels)
 
     # calculate accurate, classification report. it returns label
     def predict(self, test_x):
