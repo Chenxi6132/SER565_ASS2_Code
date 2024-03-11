@@ -18,7 +18,6 @@ class TextCNN(object):
         model.add(MaxPooling1D())
         model.add(Conv1D(256, 7, activation='relu', padding='same'))
         model.add(MaxPooling1D())
-        model.add(MaxPooling1D())
         model.add(Flatten())
         model.add(Dense(128, activation='relu'))
         model.add(Dense(self.num_class, activation=None))
