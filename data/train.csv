@@ -1,70 +1,235 @@
 ﻿Descrption,Test_ID,Functionality_Test_Case,User_Interface_Test_Case,Performance_Test_Case,Integration_Test_Case,Usability_Test_Case,Database_Test_Case,Security_Test_Case,User_Acceptance_Test_Case
-Check for SQL injection attacks.,test01,0,0,0,0,0,0,1,0
-Secure pages should use the HTTPS protocol.,test02,0,0,0,0,0,0,1,0
- Page crash should not reveal application or server info. The error page should be displayed for this.,test03,0,0,0,0,0,0,1,0
-Escape special characters in the input.,test04,0,0,0,0,0,0,1,0
-Error messages should not reveal any sensitive information.,test05,0,0,0,0,0,0,1,0
-All credentials should be transferred over an encrypted channel.,test06,0,0,0,0,0,0,1,0
-Test password security and password policy enforcement.,test07,0,0,0,0,0,0,1,0
-Check application logout functionality.,test08,0,0,0,0,0,0,1,0
-Check for Brute Force Attacks.,test09,0,0,0,0,0,0,1,0
-Cookie information should be stored in encrypted format only.,test10,0,0,0,0,0,0,1,0
-Check session cookie duration and session termination after timeout or logout.,test11,0,0,0,0,0,0,1,0
-Session tokens should be transmitted over a secured channel.,test12,0,0,0,0,0,0,1,0
-The password should not be stored in cookies.,test13,0,0,0,0,0,0,1,0
-Test for Denial of Service attacks.,test14,0,0,0,0,0,0,1,0
-Test for memory leakage.,test15,0,0,0,0,0,0,1,0
-Check if the page load time is within the acceptable range.,test16,0,0,1,0,0,0,0,0
-Check the page load on slow connections.,test17,0,0,1,0,0,0,0,0
-"Check the response time for any action under a light, normal, moderate, and heavy load conditions.",test18,0,0,1,0,0,0,0,0
-Check the performance of database stored procedures and triggers.,test19,0,0,1,0,0,0,0,0
-Check the database query execution time.,test20,0,0,1,0,0,0,0,0
-Check for load testing of the application.,test21,0,0,1,0,0,0,0,0
-Check for the Stress testing of the application.,test22,0,0,1,0,0,0,0,0
-Check CPU and memory usage under peak load conditions.,test23,0,0,1,0,0,0,0,0
-Check if correct data is getting saved in the database upon a successful page submit.,test24,0,0,0,0,0,1,0,0
-Check values for columns that are not accepting null values.,test25,0,0,0,0,0,1,0,0
-Check for data integrity. Data should be stored in single or multiple tables based on the design.,test26,0,0,0,0,0,1,0,0
-Index names should be given as per the standards e.g. IND_<Tablename>_<ColumnName>,test27,0,0,0,0,0,1,0,0
-Tables should have a primary key column.,test28,0,0,0,0,0,1,0,0
-"Table columns should have description information available (except for audit columns like created date, created by, etc.)",test29,0,0,0,0,0,1,0,0
-For every database add/update operation log should be added.,test30,0,0,0,0,0,1,0,0
-Required table indexes should be created.,test31,0,0,0,0,0,1,0,0
-Check if data is committed to the database only when the operation is successfully completed.,test32,0,0,0,0,0,1,0,0
-Data should be rolled back in case of failed transactions.,test33,0,0,0,0,0,1,0,0
-"All fields on a page (For Example, text box, radio options, drop-down lists) should be aligned properly.",test34,0,1,0,0,1,0,0,0
- Numeric values should be justified correctly unless specified otherwise.,test35,0,1,0,0,1,0,0,0
-"Enough space should be provided between field labels, columns, rows, error messages, etc.",test36,0,1,0,0,1,0,0,0
-The scrollbar should be enabled only when necessary.,test37,0,1,0,0,1,0,0,0
-"Font size, style, and color for headline, description text, labels, infield data, and grid info should be standard as specified in SRS.",test38,0,1,0,0,1,0,0,0
-The description text box should be multi-lined.,test39,0,1,0,0,1,0,0,0
-Disabled fields should be greyed out and users should not be able to set focus on these fields.,test40,0,1,0,0,1,0,0,0
-"Upon click of an input text field, the mouse arrow pointer should get changed to the cursor.",test41,0,1,0,0,1,0,0,0
- The user should not be able to type in drop-down select lists.,test42,0,1,0,0,1,0,0,0
-Information filled by users should remain intact when there is an error message on page submit. The user should be able to submit the form again by correcting the errors.,test43,0,1,0,0,1,0,0,0
-"Verify successful user authentication. The user account exists, and the password is correct",test44,1,0,0,0,0,0,0,0
-"Test product search functionality. A search function is available, and the product catalog is loaded",test45,1,0,0,0,0,0,0,0
-"Verify product addition to the shopping cart. The user is logged in, and the product is available in stock",test46,1,0,0,0,0,0,0,0
-"Process a successful order. The user is logged in, the shopping cart contains items, and payment information is valid.",test47,1,0,0,0,0,0,0,0
-" If testing for instance, a photo management application for a photography studio, the client (the user) should test that they are able to upload and manage their photos in a way that fits their business needs.",test48,0,0,0,0,0,0,0,1
-"New customer orders less than $20 of products in a single order. (small order, no free shipping)",test49,0,0,0,0,0,0,0,1
-"Existing customer orders less than $20 of products in a single order. (small order, no free shipping)",test50,0,0,0,0,0,0,0,1
-"New customer orders more than $20 but less than $50 of products in a single order. (Medium order, no free shipping)",test51,0,0,0,0,0,0,0,1
-"Existing customer orders more than $20 but less than $50 of products in a single order. (Medium order, no free shipping)",test52,0,0,0,0,0,0,0,1
-Notification to follow up via email with someone who doesn’t respond.,test53,1,0,0,0,0,0,0,0
-"Test that users can successfully log in with valid credentials (e.g., a registered username/email and password).",test54,1,0,0,0,0,0,0,0
-"Test that users receive an error message when attempting to log in with invalid credentials (e.g., incorrect password or non-existent username).",test55,1,0,0,0,0,0,0,0
-"Test that after a specified number of consecutive failed login attempts, the account is locked and the user cannot log in.",test56,1,0,0,0,0,0,0,0
-"Test the password reset feature by initiating a password reset request through the ""Forgot Password"" link.",test57,1,0,0,0,0,0,0,0
-"Test the ""Remember Me"" feature to ensure that the user remains logged in across browser sessions.",test58,1,0,0,0,0,0,0,0
-"Test the implementation of MFA by logging in with valid credentials and verifying that the MFA method (e.g., SMS code, app-based token) works correctly.",test59,1,0,0,0,0,0,0,0
-Validate the log-in and the mailbox’s module interface link,test60,0,0,0,1,0,0,0,0
-Validate the mailbox and the Delete Mails Module interface links,test61,0,0,0,1,0,0,0,0
-Test  the integration between the payment gateway and the booking system,test62,0,0,0,1,0,0,0,0
-Test  the integration between the messaging system and the notification system,test63,0,0,0,1,0,0,0,0
-Test the integration between the billing system and the accounting system,test64,0,0,0,1,0,0,0,0
-Test the integration between the search engine and the recommendation engine,test65,0,0,0,1,0,0,0,0
-"Verifying the interface link between the login and home pages. That means when a user enters the correct login credentials, it should get directed to the homepage.",test66,0,0,0,1,0,0,0,0
-"Verifying the interface link between the home page and the profile page. When the user selects the profile option, the profile page should open up.",test67,0,0,0,1,0,0,0,0
-"Verify the interface link between the network page and your connection pages. On clicking the accept button for received Invitations on the network page, it should show the accepted invitation on your connection page once clicked.",test68,0,0,0,1,0,0,0,0
-"Verify the interface link between the Notification pages, and say congrats button. On clicking the say congrats button, the user should get directed toward the new message window.",test69,0,0,0,1,0,0,0,0
+ All mandatory fields should be validated and indicated by an asterisk (*) symbol.,test01,1,0,0,0,0,0,0,0
+Validation error messages should be displayed properly in the correct position.,test02,1,0,0,0,0,0,0,0
+"All error messages should be displayed in the same CSS style (For Example, using red color)",test03,1,0,0,0,0,0,0,0
+"General confirmation messages should be displayed using CSS style other than error messages style (For Example, using green color)",test04,1,0,0,0,0,0,0,0
+Tooltips text should be meaningful.,test05,1,0,0,0,0,0,0,0
+Drop-down fields should have the first entry as blank or text like ‘Select’.,test06,1,0,0,0,0,0,0,0
+Delete functionality’ for any record on a page should ask for a confirmation.,test07,1,0,0,0,0,0,0,0
+Select/deselect all records option should be provided if page supports record add/delete/update functionality,test08,1,0,0,0,0,0,0,0
+Amount values should be displayed with correct currency symbols.,test09,1,0,0,0,0,0,0,0
+Default page sorting should be provided.,test10,1,0,0,0,0,0,0,0
+Reset button functionality should set default values for all fields.,test11,1,0,0,0,0,0,0,0
+All numeric values should be formatted properly.,test12,1,0,0,0,0,0,0,0
+Input values greater than the specified max limit should not be accepted or stored in the database.,test13,1,0,0,0,0,0,0,0
+Check all input fields for special characters.,test14,1,0,0,0,0,0,0,0
+field accepting user’s first name should be labeled properly as ‘First Name’.,test15,1,0,0,0,0,0,0,0
+Check page sorting functionality after add/edit/delete operations on any record.,test16,1,0,0,0,0,0,0,0
+Check application behavior after the operation timeout.,test17,1,0,0,0,0,0,0,0
+Check cookies used in an application.,test18,1,0,0,0,0,0,0,0
+Check if downloadable files are pointing to the correct file paths.,test19,1,0,0,0,0,0,0,0
+All resource keys should be configurable in config files or database instead of hard coding.,test20,1,0,0,0,0,0,0,0
+Standard conventions should be followed throughout for naming resource keys.,test21,1,0,0,0,0,0,0,0
+Validate markup for all web pages (validate HTML and CSS for syntax errors) to make sure it is compliant with the standards.,test22,1,0,0,0,0,0,0,0
+Application crash or unavailable pages should be redirected to the error page.,test23,1,0,0,0,0,0,0,0
+Check the text on all pages for spelling and grammatical errors.,test24,1,0,0,0,0,0,0,0
+A proper validation message should appear.,test25,1,0,0,0,0,0,0,0
+Check for negative numbers if allowed for numeric fields.,test26,1,0,0,0,0,0,0,0
+Check the number of fields with decimal number values.,test27,1,0,0,0,0,0,0,0
+Check the functionality of buttons available on all pages.,test28,1,0,0,0,0,0,0,0
+The user should not be able to submit a page twice by pressing the submit button in quick succession.,test29,1,0,0,0,0,0,0,0
+Divide by zero errors should be handled for any calculations.,test30,1,0,0,0,0,0,0,0
+Input data with the first and last position blank should be handled correctly.,test31,1,0,0,0,0,0,0,0
+"All fields on a page (For Example, text box, radio options, drop-down lists) should be aligned properly.",test32,0,1,0,0,1,0,0,0
+Numeric values should be justified correctly unless specified otherwise.,test33,0,1,0,0,1,0,0,0
+"Enough space should be provided between field labels, columns, rows, error messages, etc.",test34,0,1,0,0,1,0,0,0
+The scrollbar should be enabled only when necessary.,test35,0,1,0,0,1,0,0,0
+"Font size, style, and color for headline, description text, labels, infield data, and grid info should be standard as specified in SRS.",test36,0,1,0,0,1,0,0,0
+The description text box should be multi-lined.,test37,0,1,0,0,1,0,0,0
+Disabled fields should be greyed out and users should not be able to set focus on these fields.,test38,0,1,0,0,1,0,0,0
+"Upon click of an input text field, the mouse arrow pointer should get changed to the cursor.",test39,0,1,0,0,1,0,0,0
+The user should not be able to type in drop-down select lists.,test40,0,1,0,0,1,0,0,0
+The user should be able to submit the form again by correcting the errors.,test41,0,1,0,0,1,0,0,0
+Check if proper field labels are used in error messages.,test42,0,1,0,0,1,0,0,0
+Drop-down field values should be displayed in defined sort order.,test43,0,1,0,0,1,0,0,0
+Tab and Shift+Tab order should work properly.,test44,0,1,0,0,1,0,0,0
+Default radio options should be pre-selected on the page load.,test45,0,1,0,0,1,0,0,0
+Field-specific and page-level help messages should be available.,test46,0,1,0,0,1,0,0,0
+Check if the correct fields are highlighted in case of errors.,test47,0,1,0,0,1,0,0,0
+Check if the drop-down list options are readable and not truncated due to field size limits.,test48,0,1,0,0,1,0,0,0
+All buttons on a page should be accessible by keyboard shortcuts and the user should be able to perform all operations using a keyboard.,test49,0,1,0,0,1,0,0,0
+Check all pages for broken images.,test50,0,1,0,0,1,0,0,0
+Check all pages for broken links.,test51,0,1,0,0,1,0,0,0
+All pages should have a title.,test52,0,1,0,0,1,0,0,0
+Confirmation messages should be displayed before performing any update or delete operation.,test53,0,1,0,0,1,0,0,0
+Hourglass should be displayed when the application is busy.,test54,0,1,0,0,1,0,0,0
+Page text should be left-justified.,test55,0,1,0,0,1,0,0,0
+The user should be able to select only one radio option and any combination for checkboxes.,test56,0,1,0,0,1,0,0,0
+The user should be able to filter results using all parameters on the page.,test57,1,0,0,0,0,0,0,0
+Refine search functionality should load the search page with all user-selected search parameters.,test58,1,0,0,0,0,0,0,0
+" When there are at least one filter criteria required to perform the search operation, make sure the proper error message is displayed when the user submits the page without selecting any filter criteria.",test59,1,0,0,0,0,0,0,0
+"When at least one filter criteria selection is not compulsory, the user should be able to submit the page and the default search criteria should get used to query results.",test60,1,0,0,0,0,0,0,0
+Proper validation messages should be displayed for all invalid values for filter criteria.,test61,1,0,0,0,0,0,0,0
+Page loading symbol should be displayed when it’s taking more than default time to load the result page.,test62,1,0,0,0,0,0,0,0
+Check if all the search parameters are used to fetch data shown on the result grid.,test63,1,0,0,0,0,0,0,0
+The total number of results should be displayed in the result grid.,test64,1,0,0,0,0,0,0,0
+Search criteria used for searching should be displayed in the result grid.,test65,1,0,0,0,0,0,0,0
+Result grid values should be sorted by default column.,test66,1,0,0,0,0,0,0,0
+Sorted columns should be displayed with a sort icon.,test67,1,0,0,0,0,0,0,0
+Result grids should include all the specified columns with correct values.,test68,1,0,0,0,0,0,0,0
+Ascending and descending sorting functionality should work for columns supported by data sorting.,test69,1,0,0,0,0,0,0,0
+Result grids should be displayed with proper column and row spacing.,test70,1,0,0,0,0,0,0,0
+Pagination should be enabled when there are more results than the default result count per page.,test71,1,0,0,0,0,0,0,0
+"Check for Next, Previous, First and Last page pagination functionality.",test72,1,0,0,0,0,0,0,0
+Duplicate records should not be displayed in the result grid.,test73,1,0,0,0,0,0,0,0
+Check if all the columns are visible and a horizontal scrollbar is enabled if necessary.,test74,1,0,0,0,0,0,0,0
+Check the data for dynamic columns (columns whose values are calculated dynamically based on the other column values).,test75,1,0,0,0,0,0,0,0
+For result grids showing reports check ‘Totals’ row and verify the total for every column.,test76,1,0,0,0,0,0,0,0
+For result grids showing reports check ‘Totals’ row data when pagination is enabled and the user gets navigated to the next page.,test77,1,0,0,0,0,0,0,0
+Check if proper symbols are used for displaying column values e.g. % symbol should be displayed for percentage calculation.,test78,1,0,0,0,0,0,0,0
+Check result grid data to know if the date range is enabled.,test79,1,0,0,0,0,0,0,0
+Check if the default window size is correct.,test80,1,0,0,0,0,0,0,0
+Check if the child window size is correct.,test81,1,0,0,0,0,0,0,0
+"Check if there is any field on the page with default focus (in general, the focus should be set on the first input field of the screen).",test82,1,0,0,0,0,0,0,0
+Check if child windows are getting closed on closing parent/opener window.,test83,1,0,0,0,0,0,0,0
+"If the child window is opened, the user should not be able to use or update any field in the background or parent window",test84,1,0,0,0,0,0,0,0
+"Check window minimize, maximize, and close functionality.",test85,1,0,0,0,0,0,0,0
+Check if the window is re-sizable.,test86,1,0,0,0,0,0,0,0
+Check scroll bar functionality for parent and child windows.,test87,1,0,0,0,0,0,0,0
+Check cancel button functionality for the child window.,test88,1,0,0,0,0,0,0,0
+Check if correct data is getting saved in the database upon a successful page submit.,test89,0,0,0,0,0,1,0,0
+Check values for columns that are not accepting null values.,test90,0,0,0,0,0,1,0,0
+Data should be stored in single or multiple tables based on the design.,test91,0,0,0,0,0,1,0,0
+Index names should be given as per the standards e.g. IND_<Tablename>_<ColumnName>,test92,0,0,0,0,0,1,0,0
+Tables should have a primary key column.,test93,0,0,0,0,0,1,0,0
+"Table columns should have description information available (except for audit columns like created date, created by, etc.)",test94,0,0,0,0,0,1,0,0
+For every database add/update operation log should be added.,test95,0,0,0,0,0,1,0,0
+Required table indexes should be created.,test96,0,0,0,0,0,1,0,0
+Check if data is committed to the database only when the operation is successfully completed.,test97,0,0,0,0,0,1,0,0
+Data should be rolled back in case of failed transactions.,test98,0,0,0,0,0,1,0,0
+"Database name should be given as per the application type i.e. test, UAT, sandbox, live (though this is not a standard it is helpful for database maintenance)",test99,0,0,0,0,0,1,0,0
+Database logical names should be given according to the database name (again this is not standard but helpful for DB maintenance).,test100,0,0,0,0,0,1,0,0
+Stored procedures should not be named with a prefix “sp_”,test101,0,0,0,0,0,1,0,0
+"Check if values for table audit columns (like created date, created by, updated, updated by, is deleted, deleted data, deleted by, etc.) are populated properly.",test102,0,0,0,0,0,1,0,0
+Check if input data is not truncated while saving. Field length shown to the user on the page and in database schema should be the same.,test103,0,0,0,0,0,1,0,0
+"Check numeric fields with minimum, maximum, and float values.",test104,0,0,0,0,0,1,0,0
+Check numeric fields with negative values (for both acceptance and non-acceptance).,test105,0,0,0,0,0,1,0,0
+Check if the radio button and drop-down list options are saved correctly in the database.,test106,0,0,0,0,0,1,0,0
+Check if the database fields are designed with the correct data type and data length.,test107,0,0,0,0,0,1,0,0
+are implemented correctly.,test108,0,0,0,0,0,1,0,0
+Test stored procedures and triggers with sample input data.,test109,0,0,0,0,0,1,0,0
+Input field leading and trailing spaces should be truncated before committing data to the database.,test110,0,0,0,0,0,1,0,0
+Null values should not be allowed for the Primary key column.,test111,0,0,0,0,0,1,0,0
+Check for uploaded image path.,test112,1,0,0,0,0,0,0,0
+Check image upload and change functionality.,test113,1,0,0,0,0,0,0,0
+"Check image upload functionality with image files of different extensions (For Example, JPEG, PNG, BMP, etc.)",test114,1,0,0,0,0,0,0,0
+Check image upload functionality with images having space or any other allowed special character in the file name.,test115,1,0,0,0,0,0,0,0
+Check duplicate name image upload.,test116,1,0,0,0,0,0,0,0
+The Proper error message should be displayed.,test117,1,0,0,0,0,0,0,0
+A proper error message should be displayed.,test118,1,0,0,0,0,0,0,0
+Check if images of specified height and width (if defined) are accepted otherwise rejected.,test119,1,0,0,0,0,0,0,0
+The image upload progress bar should appear for large size images.,test120,1,0,0,0,0,0,0,0
+Check if the cancel button functionality is working in between the upload process.,test121,1,0,0,0,0,0,0,0
+Check if file selection dialog shows only supported files listed.,test122,1,0,0,0,0,0,0,0
+Check multiple images upload functionality.,test123,1,0,0,0,0,0,0,0
+Image quality should not be changed after upload.,test124,1,0,0,0,0,0,0,0
+Check if the user is able to use/view the uploaded images.,test125,1,0,0,0,0,0,0,0
+The email template should use standard CSS for all emails.,test126,1,0,0,0,0,0,0,0
+Email addresses should be validated before sending emails.,test127,1,0,0,0,0,0,0,0
+Special characters in the email body template should be handled properly.,test128,1,0,0,0,0,0,0,0
+"Language-specific characters (For Example, Russian, Chinese or German language characters) should be handled properly in the email body template.",test129,1,0,0,0,0,0,0,0
+Email subject should not be blank.,test130,1,0,0,0,0,0,0,0
+Placeholder fields used in the email template should be replaced with actual values e.g. {Firstname} {Lastname} should be replaced with an individual’s first and last name properly for all the recipients.,test131,1,0,0,0,0,0,0,0
+If reports with dynamic values are included in the email body and report data should be calculated correctly.,test132,1,0,0,0,0,0,0,0
+Email sender name should not be blank.,test133,1,0,0,0,0,0,0,0
+"Emails should be checked in different email clients like Outlook, Gmail, Hotmail, Yahoo! mail, etc.",test134,1,0,0,0,0,0,0,0
+"Check to send email functionality using TO, CC and BCC fields.",test135,1,0,0,0,0,0,0,0
+Check plain text emails.,test136,1,0,0,0,0,0,0,0
+Check HTML format emails.,test137,1,0,0,0,0,0,0,0
+"Check email header and footer for company logo, privacy policy, and other links.",test138,1,0,0,0,0,0,0,0
+Check emails with attachments.,test139,1,0,0,0,0,0,0,0
+"Check to send email functionality to single, multiple or distribution list recipients.",test140,1,0,0,0,0,0,0,0
+Check if a reply to the email address is correct.,test141,1,0,0,0,0,0,0,0
+Check to send the high volume of emails.,test142,1,0,0,0,0,0,0,0
+ The file should get exported in the proper file extension.,test143,1,0,0,0,0,0,0,0
+"The file name for the exported Excel file should be as per the standards, For Example, if the file name is using the timestamp, it should get replaced properly with an actual timestamp at the time of exporting the file.",test144,1,0,0,0,0,0,0,0
+Check for date format if exported Excel file contains the date columns.,test145,1,0,0,0,0,0,0,0
+Check number formatting for numeric or currency values. Formatting should be the same as shown on the page.,test146,1,0,0,0,0,0,0,0
+The exported file should have columns with proper column names.,test147,1,0,0,0,0,0,0,0
+Default page sorting should be carried in the exported file as well.,test148,1,0,0,0,0,0,0,0
+"Excel file data should be formatted properly with header and footer text, date, page numbers, etc. values for all pages.",test149,1,0,0,0,0,0,0,0
+Check if the data displayed on a page and exported Excel file is the same.,test150,1,0,0,0,0,0,0,0
+Check export functionality when pagination is enabled.,test151,1,0,0,0,0,0,0,0
+"Check if the export button is showing proper icon according to the exported file type, For Example, Excel file icon for xls files",test152,1,0,0,0,0,0,0,0
+Check export functionality for files with very large size.,test153,1,0,0,0,0,0,0,0
+Check export functionality for pages containing special characters. Check if these special characters are exported properly in the Excel file.,test154,1,0,0,0,0,0,0,0
+Check if the page load time is within the acceptable range.,test155,0,0,1,0,0,0,0,0
+Check the page load on slow connections.,test156,0,0,1,0,0,0,0,0
+"Check the response time for any action under a light, normal, moderate, and heavy load conditions.",test157,0,0,1,0,0,0,0,0
+Check the performance of database stored procedures and triggers.,test158,0,0,1,0,0,0,0,0
+Check the database query execution time.,test159,0,0,1,0,0,0,0,0
+Check for load testing of the application.,test160,0,0,1,0,0,0,0,0
+Check for the Stress testing of the application.,test161,0,0,1,0,0,0,0,0
+Check CPU and memory usage under peak load conditions.,test162,0,0,1,0,0,0,0,0
+Check for SQL injection attacks.,test163,0,0,0,0,0,0,1,0
+Secure pages should use the HTTPS protocol.,test164,0,0,0,0,0,0,1,0
+The error page should be displayed for this.,test165,0,0,0,0,0,0,1,0
+Escape special characters in the input.,test166,0,0,0,0,0,0,1,0
+Error messages should not reveal any sensitive information.,test167,0,0,0,0,0,0,1,0
+All credentials should be transferred over an encrypted channel.,test168,0,0,0,0,0,0,1,0
+Test password security and password policy enforcement.,test169,0,0,0,0,0,0,1,0
+Check application logout functionality.,test170,0,0,0,0,0,0,1,0
+Check for Brute Force Attacks.,test171,0,0,0,0,0,0,1,0
+Cookie information should be stored in encrypted format only.,test172,0,0,0,0,0,0,1,0
+Check session cookie duration and session termination after timeout or logout.,test173,0,0,0,0,0,0,1,0
+Session tokens should be transmitted over a secured channel.,test174,0,0,0,0,0,0,1,0
+The password should not be stored in cookies.,test175,0,0,0,0,0,0,1,0
+Test for Denial of Service attacks.,test176,0,0,0,0,0,0,1,0
+Test for memory leakage.,test177,0,0,0,0,0,0,1,0
+Test unauthorized application access by manipulating variable values in the browser address bar.,test178,0,0,0,0,0,0,1,0
+Test file extension handing so that exe files are not uploaded and executed on the server.,test179,0,0,0,0,0,0,1,0
+Sensitive fields like passwords and credit card information should not have to autocomplete enabled.,test180,0,0,0,0,0,0,1,0
+File upload functionality should use file type restrictions and also anti-virus for scanning uploaded files.,test181,0,0,0,0,0,0,1,0
+Check if directory listing is prohibited.,test182,0,0,0,0,0,0,1,0
+Passwords and other sensitive fields should be masked while typing.,test183,0,0,0,0,0,0,1,0
+Check if forgot password functionality is secured with features like temporary password expiry after specified hours and security question is asked before changing or requesting a new password.,test184,0,0,0,0,0,0,1,0
+Verify CAPTCHA functionality.,test185,0,0,0,0,0,0,1,0
+Check if important events are logged in log files.,test186,0,0,0,0,0,0,1,0
+Check if access privileges are implemented correctly.,test187,0,0,0,0,0,0,1,0
+environment to be production,test188,0,0,0,0,0,0,1,0
+response should be okay to process,test189,0,0,0,0,0,0,1,0
+response must be valid and have a body,test190,0,0,0,0,0,0,1,0
+Testing if user is able to navigate to the application website,test191,0,1,0,0,0,0,0,0
+Testing if the user is able to enter username and password on the login page.,test192,0,1,0,0,0,0,0,0
+Testing if login page title is displayed as StackDemo,test193,0,1,0,0,0,0,0,0
+Testing if the user is able to click on the login button and is navigated to the homepage.,test194,0,1,0,0,0,0,0,0
+Testing if the username is displayed on the homepage after login to Bstackdemo.,test195,0,1,0,0,0,0,0,0
+Testing if the “Add to Cart” button is displayed against the item the user wants to add to the cart.,test196,0,1,0,0,0,0,0,0
+Testing if “Add to Cart” button is enabled and user is able to add item to the cart,test197,0,1,0,0,0,0,0,0
+"Testing that after adding the item to cart, the time is visible in the bag.",test198,0,1,0,0,0,0,0,0
+Testing if the item price is displayed ,test199,0,1,0,0,0,0,0,0
+Testing if the checkout button is displayed and user is able to click on the checkout button.,test200,0,1,0,0,0,0,0,0
+"Testing if the user has the option to enter mandatory details like First Name, Last Name, Address, State/Province and Postal Code.",test201,0,1,0,0,0,0,0,0
+Testing if user is able to click on submit button,test202,0,1,0,0,0,0,0,0
+Testing if the message “Your order has been successfully placed” is displayed after clicking on the submit button.,test203,0,1,0,0,0,0,0,0
+Testing if “download order receipt” has been generated in pdf format.,test204,0,1,0,0,0,0,0,0
+" Testing the size, position, width, height of the elements.",test205,0,1,0,0,0,0,0,0
+Testing of the error messages that are getting displayed.,test206,0,1,0,0,0,0,0,0
+Testing the different sections of the screen.,test207,0,1,0,0,0,0,0,0
+Testing of the font whether it is readable or not.,test208,0,1,0,0,0,0,0,0
+"Testing of the screen in different resolutions with the help of zooming in and zooming out like 640 x 480, 600×800, etc.",test209,0,1,0,0,0,0,0,0
+"Testing the alignment of the texts and other elements like icons, buttons, etc. are in proper place or not.",test210,0,1,0,0,0,0,0,0
+Testing the colors of the fonts.,test211,0,1,0,0,0,0,0,0
+"Testing the colors of the error messages, warning messages.",test212,0,1,0,0,0,0,0,0
+Testing whether the image has good clarity or not.,test213,0,1,0,0,0,0,0,0
+Testing the alignment of the images.,test214,0,1,0,0,0,0,0,0
+Testing of the spelling.,test215,0,1,0,0,0,0,0,0
+The user must not get frustrated while using the system interface.,test216,0,1,0,0,0,0,0,0
+Testing whether the interface is attractive or not.,test217,0,1,0,0,0,0,0,0
+Testing of the scrollbars according to the size of the page if any.,test218,0,1,0,0,0,0,0,0
+Testing of the disabled fields if any.,test219,0,1,0,0,0,0,0,0
+Testing of the size of the images.,test220,0,1,0,0,0,0,0,0
+Testing of the headings whether it is properly aligned or not.,test221,0,1,0,0,0,0,0,0
+Testing of the color of the hyperlink.,test222,0,1,0,0,0,0,0,0
+Check the interface link between the Login and Mailbox module. Enter login credentials and click on the Login button,test223,0,0,0,1,0,0,0,0
+Check the interface link between the Mailbox and Delete Mails Module. From Mailbox select the email and click a delete button. ,test224,0,0,0,1,0,0,0,0
+Test integration between the payment gateway and the booking system,test225,0,0,0,1,0,0,0,0
+Test the integration between the messaging system and the notification system,test226,0,0,0,1,0,0,0,0
+Test the integration between the billing system and the accounting system,test227,0,0,0,1,0,0,0,0
+Test the integration between the search engine and the recommendation engine,test228,0,0,0,1,0,0,0,0
+"Successful User RegistrationGiven the user is on the registration page.When the user enters valid registration information, including a unique username, a valid email address, and a strong password.And the user clicks the ""Register"" button.Then the user should be redirected to a ""Thank You"" page.And the user should receive a confirmation email.",test229,0,0,0,0,0,0,0,1
+"Registration with Existing EmailGiven the user is on the registration page.When the user enters a valid username, a valid email address that is already registered in the system, and a strong password.And the user clicks the ""Register"" button.Then the user should see an error message indicating that the email address is already in use.And the user should not be registered.",test230,0,0,0,0,0,0,0,1
+"Weak PasswordGiven the user is on the registration page.When the user enters valid registration information, including a unique username, a valid email address, but a weak password (less than 8 characters).And the user clicks the ""Register"" button.Then the user should see an error message indicating that the password is too weak.And the user should not be registered.",test231,0,0,0,0,0,0,0,1
+"Missing UsernameGiven the user is on the registration page.When the user enters valid registration information, including a valid email address and a strong password, but leaves the username field blank.And the user clicks the ""Register"" button.Then the user should see an error message indicating that the username is required.And the user should not be registered.",test232,0,0,0,0,0,0,0,1
+" When manufacturing ballpoint pens, caps, bodies, ends, and clips, ink cartridges, and ballpoint pens are manufactured and tested separately. Once you have two or more units ready, assemble them and run integration tests. Once the full pen is integrated, a system test will be run. After Once system testing is complete, acceptance testing is performed to ensure the pen is ready for delivery to end users (students, poets, hobbyists, etc.).",test233,0,0,0,0,0,0,0,1
+" Paytm wants to make applications for its customers, and TCS is given the contract to make them. And suppose TCS completed the application development. The question is whether Paytm will use applications obtained from TCS as soon as they get them from TCS. No, Paytm has a group of test engineers who start testing the application after receiving the software. These end-to-end tests are performed in a customer environment called User Acceptance Testing.",test234,0,0,0,0,0,0,0,1

@@ -1,0 +1,10 @@
+training:
+  model_name: 'textrnn'
+  learning_rate: 0.8
+  epochs: 3
+  maxlen: 32
+  embedding_dim: 100
+preprocessing:
+  input_convertor: 'nn_vectorization'
+  maxlen: 32
+  embedding_dim: 100
