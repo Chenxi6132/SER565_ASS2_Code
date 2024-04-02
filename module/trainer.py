@@ -1,6 +1,6 @@
 from sklearn.metrics import accuracy_score
 from sklearn.metrics import classification_report
-from module.model import NaiveBayer, TextCNN
+from module.model import NaiveBayer, TextCNN, TextRNN
 
 class Trainer(object):
     def __init__(self, config, logger, classes):
@@ -14,6 +14,8 @@ class Trainer(object):
             self.model = NaiveBayer(classes)
         elif self.config['model_name'] == 'textcnn':
             self.model = TextCNN(classes, self.config)
+        elif self.config['model_name'] == 'textrnn':
+            self.model = TextRNN(classes, self.config)
         else:
             self.logger.warning("Model Type: {} is not support yet".format(self.config['model_name']))
 

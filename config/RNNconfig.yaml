@@ -14,23 +14,24 @@ preprocessing:
   - User_Acceptance_Test_Case
   input_text_column: Descrption
   input_id_column: Test_ID
-  maxlen: 128
+  maxlen: 32
   skip_tokenization: false
   batch_size: 32
-  input_convertor: count_vectorization
+  input_convertor: nn_vectorization
+  embedding_dim: 100
 training:
-  learning_rate: 1.0
+  learning_rate: 0.8
   dropout_rate: 0.5
   batch_normalization: true
   optimizer: sgd
-  epochs: 1
+  epochs: 3
   gradient_cliping: true
   batch_size: 32
-  embedding_dim: 128
-  maxlen: 128
+  embedding_dim: 100
+  maxlen: 32
   predict_only: false
   output_path: ./output
-  model_name: naivebayse
+  model_name: textrnn
 predict:
   output_path: ./data/result.csv
   enable_calibration: false

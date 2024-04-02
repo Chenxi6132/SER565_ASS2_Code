@@ -17,23 +17,24 @@ preprocessing:
   maxlen: 128
   skip_tokenization: false
   batch_size: 32
-  input_convertor: count_vectorization
+  input_convertor: nn_vectorization
+  embedding_dim: 100
 training:
-  learning_rate: 1.0
+  learning_rate: 0.8
   dropout_rate: 0.5
   batch_normalization: true
   optimizer: sgd
   epochs: 1
   gradient_cliping: true
   batch_size: 32
-  embedding_dim: 128
+  embedding_dim: 100
   maxlen: 128
   predict_only: false
   output_path: ./output
-  model_name: naivebayse
+  model_name: textcnn
 predict:
   output_path: ./data/result.csv
-  enable_calibration: false
+  enable_calibration: true
   calibrator_type: platt_scaling
   calibrators_output_path: ./output
   debug_validation: false

@@ -1,28 +1,19 @@
 from keras.models import Sequential
-from keras.layers import Embedding, Conv1D, MaxPooling1D, Dense, Flatten, Dropout
+from keras.layers import Embedding, SimpleRNN, Dense
 
-class TextCNN(object):
+
+class TextRNN(object):
     def __init__(self, classes, config):
         self.classes = classes
-        self.num_class = len(classes)
+        self.num_classes = len(classes)
         self.config = config
         self.model = self._build()
-
 
     def _build(self):
         model = Sequential()
         model.add(Embedding(self.config['vocab_size'], self.config['embedding_dim'], input_length=self.config['maxlen'], trainable=True))
-        model.add(Conv1D(64, 7, activation='relu', padding='same'))
-        model.add(MaxPooling1D())
-        model.add(Conv1D(128, 7, activation='relu', padding='same'))
-        model.add(MaxPooling1D())
-        model.add(Conv1D(256, 7, activation='relu', padding='same'))
-        model.add(MaxPooling1D())
-        model.add(MaxPooling1D())
-        model.add(Flatten())
-        model.add(Dense(128, activation='relu'))
-        model.add(Dense(self.num_class, activation=None))
-        model.add(Dense(self.num_class, activation='sigmoid'))
+        model.add(SimpleRNN(100))
+        model.add(Dense(self.num_classes, activation='sigmoid'))
         model.compile(optimizer='adam', loss='BinaryCrossentropy', metrics='accuracy')
         model.summary()
         return model
@@ -36,6 +27,3 @@ class TextCNN(object):
 
     def predict_prob(self, test_x):
         return self.model.predict(test_x)
-
-
-

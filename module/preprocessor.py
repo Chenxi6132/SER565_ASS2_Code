@@ -107,12 +107,9 @@ class Preprocessor(object):
             indsent = [self.word2ind.get(i, self.word2ind['<unk>']) for i in sent]
             test_x_ids.append(indsent)
 
-        data_x_ids = keras.preprocessing.sequence.pad_sequences(data_x_ids, maxlen=self.config['maxlen'],
-                                                                padding='post', value=self.word2ind['<pad>'])
-        validate_x_ids = keras.preprocessing.sequence.pad_sequences(validate_x_ids, maxlen=self.config['maxlen'],
-                                                                    padding='post', value=self.word2ind['<pad>'])
-        test_x_ids = keras.preprocessing.sequence.pad_sequences(test_x_ids, maxlen=self.config['maxlen'],
-                                                                padding='post', value=self.word2ind['<pad>'])
+        data_x_ids = keras.preprocessing.sequence.pad_sequences(data_x_ids, maxlen=self.config['maxlen'], padding='post', value=self.word2ind['<pad>'])
+        validate_x_ids = keras.preprocessing.sequence.pad_sequences(validate_x_ids, maxlen=self.config['maxlen'], padding='post', value=self.word2ind['<pad>'])
+        test_x_ids = keras.preprocessing.sequence.pad_sequences(test_x_ids, maxlen=self.config['maxlen'], padding='post', value=self.word2ind['<pad>'])
 
         data_x_ids = np.array(data_x_ids)
         validate_x_ids = np.array(validate_x_ids)
