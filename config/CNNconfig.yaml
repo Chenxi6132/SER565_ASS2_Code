@@ -12,7 +12,7 @@ preprocessing:
   - Database_Test_Case
   - Security_Test_Case
   - User_Acceptance_Test_Case
-  input_text_column: Descrption
+  input_text_column: Description
   input_id_column: Test_ID
   maxlen: 128
   skip_tokenization: false
