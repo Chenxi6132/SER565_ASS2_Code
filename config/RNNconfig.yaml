@@ -24,7 +24,7 @@ training:
   dropout_rate: 0.5
   batch_normalization: true
   optimizer: sgd
-  epochs: 3
+  epochs: 80
   gradient_cliping: true
   batch_size: 32
   embedding_dim: 100
