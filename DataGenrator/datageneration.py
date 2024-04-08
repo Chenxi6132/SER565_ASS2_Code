@@ -50,7 +50,8 @@ df = pd.DataFrame({
 df["Description"] = complex_descriptions
 
 # Save the updated DataFrame to a new Excel file
-complex_file_path = "C/User/Test_Cases_V21.xlsx"
+complex_file_path = "C/User/Test_Cases_V21.xlsx" 
+#replace the path to your current path
 df.to_excel(complex_file_path, index=False)
 
 complex_file_path
