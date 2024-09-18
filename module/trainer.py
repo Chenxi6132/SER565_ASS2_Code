@@ -1,6 +1,6 @@
-from sklearn.metrics import accuracy_score
-from sklearn.metrics import classification_report
+from sklearn.metrics import accuracy_score, classification_report
 from module.model import NaiveBayer, TextCNN, TextRNN
+
 
 class Trainer(object):
     def __init__(self, config, logger, classes):
@@ -8,6 +8,7 @@ class Trainer(object):
         self.logger = logger
         self.classes = classes
         self._create_model(classes)
+
 
     def _create_model(self, classes):
         if self.config['model_name'] == 'naivebayse':
@@ -31,4 +32,3 @@ class Trainer(object):
     def validate(self, validate_x, validate_y):
         prediction = self.model.predict(validate_x)
         return self.metrics(prediction, validate_y)
-

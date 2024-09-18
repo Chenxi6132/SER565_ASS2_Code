@@ -10,7 +10,7 @@ class Preprocessor(object):
     def __init__(self, config, logger):
         self.config = config
         self.logger = logger
-        self.classes = self.config['classes']  #such as toxic, obscene
+        self.classes = self.config['classes']
         self._load_data()
 
     @staticmethod
@@ -53,7 +53,7 @@ class Preprocessor(object):
         self.test_x, self.test_ids = self._parse(test_df, is_test=True)
 
     def process(self):
-        input_convertor = self.config.get('input_convertor', None)  #指定输入方案
+        input_convertor = self.config.get('input_convertor', None)
 
         data_x, data_y, train_x, train_y, validate_x, validate_y, test_x = \
             self.data_x, self.data_y, \

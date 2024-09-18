@@ -1,8 +1,7 @@
 import argparse
 import logging
 import yaml
-
-from module import Preprocessor, Trainer, Predictor
+from module import Preprocessor, Trainer, Predictor, optimize_hyperparameters
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='process commandline')
@@ -26,9 +25,10 @@ if __name__ == "__main__":
             if config['training']['model_name'] != 'naivebayse':
                 config['training']['vocab_size'] = len(preprocessor.word2ind.keys())
 
-            trainer = Trainer(config['training'], logger, preprocessor.classes)
-            # dev_model = trainer.fit(train_x, train_y)  # deve model
+            # call GWO- optimizer
 
+
+            trainer = Trainer(config['training'], logger, preprocessor.classes)
             full_model = trainer.fit(data_x, data_y)
 
             accuracy, cls_report = trainer.validate(validate_x, validate_y)
