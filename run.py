@@ -1,7 +1,7 @@
 import argparse
 import logging
 import yaml
-from module import Preprocessor, Trainer, Predictor, optimize_hyperparameters
+from module import Preprocessor, Trainer, Predictor
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='process commandline')

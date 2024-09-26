@@ -32,3 +32,11 @@ class Trainer(object):
     def validate(self, validate_x, validate_y):
         prediction = self.model.predict(validate_x)
         return self.metrics(prediction, validate_y)
+
+    def metrics_accuracy(self, predictions, labels):
+        accuracy = accuracy_score(labels, predictions)
+        return accuracy
+
+    def validate_accuracy(self, validate_x, validate_y):
+        prediction = self.model.predict(validate_x)
+        return self.metrics_accuracy(prediction, validate_y)
