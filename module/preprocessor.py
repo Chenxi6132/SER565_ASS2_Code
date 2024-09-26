@@ -6,6 +6,7 @@ from tensorflow import keras
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 
+
 class Preprocessor(object):
     def __init__(self, config, logger):
         self.config = config

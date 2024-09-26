@@ -9,7 +9,6 @@ predict:
   - Usability_Test_Case
   - Database_Test_Case
   - Security_Test_Case
-#  - User_Acceptance_Test_Case
   debug_validation: false
   enable_calibration: false
   output_path: ./data/result.csv
@@ -23,7 +22,6 @@ preprocessing:
   - Usability_Test_Case
   - Database_Test_Case
   - Security_Test_Case
-#  - User_Acceptance_Test_Case
   embedding_dim: 100
   input_convertor: nn_vectorization
   input_id_column: Test_ID
@@ -47,4 +45,4 @@ training:
   optimizer: sgd
   output_path: ./output
   predict_only: false
-  rnn_units: 128
+  rnn_units: 150

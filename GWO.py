@@ -6,6 +6,7 @@ import logging
 import argparse
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 
+
 parser = argparse.ArgumentParser(description='process commandline')
 parser.add_argument('--config', type=str, required=True)
 parser.add_argument('--log_level', type=str, default="INFO")
