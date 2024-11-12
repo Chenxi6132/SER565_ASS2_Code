@@ -47,3 +47,49 @@ predict:
   - Database_Test_Case
   - Security_Test_Case
   - User_Acceptance_Test_Case
+
+#######Test Cases########
+#    - Functionality_Test_Case
+#    - User_Interface_Test_Case
+#    - Performance_Test_Case
+#    - Integration_Test_Case
+#    - Usability_Test_Case
+#    - Database_Test_Case
+#    - Security_Test_Case
+#    - User_Acceptance_Test_Case
+
+####### Yotube Comment ###############   train_youtube.csv    test_youtube.csv
+#  -IsToxic
+#  -IsAbusive
+#  -IsThreat
+#  -IsProvocative
+#  -IsObscene
+#  -IsHatespeech
+#  -IsRacist
+#  -IsNationalist
+#  -IsSexist
+#  -IsHomophobic
+#  -IsReligiousHate
+#  -IsRadicalism
+
+####### Emotional dataset ############### emotion_test.csv  emotion_train.csv
+#  - anger
+#  - boredom
+#  - enthusiasm
+#  - fun
+#  - happiness
+#  - hate
+#  - love
+#  - neutral
+#  - relief
+#  - sadness
+#  - surprise
+#  - worry
+
+####### MultiLabel dataset ############### multiLabel_test.csv  multiLabel_train.csv
+#  - Computer Science
+#  - Physics
+#  - Mathematics
+#  - Statistics
+#  - Quantitative Biology
+#  - Quantitative Finance

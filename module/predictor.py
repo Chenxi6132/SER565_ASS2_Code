@@ -19,6 +19,15 @@ class Predictor(object):
         with open(self.config['output_path'], 'w') as output_csv_file:
             header = ['Description', 'Test_ID', 'Functionality_Test_Case', 'User_Interface_Test_Case', 'Performance_Test_Case' 'Integration_Test_Case', 'Usability_Test_Case', 'Database_Test_Case', 'Security_Test_Case', 'User_Acceptance_Test_Case']
 
+            # YouTube header
+            #header = ['Test_ID', 'IsToxic', 'IsAbusive', 'IsThreat', 'IsProvocative', 'IsObscene', 'IsHatespeech', 'IsRacist', 'IsNationalist', 'IsSexist', 'IsHomophobic', 'IsReligiousHate', 'IsRadicalism']
+
+            # Emotional header
+            # header = ['Test_ID', 'anger', 'boredom', 'enthusiasm', 'fun', 'happiness', 'hate', 'love', 'neutral', 'relief', 'sadness', 'surprise', 'worry']
+
+            # MultiLabel header
+            # header = ['Test_ID', 'Computer_Science', 'Physics', 'Mathematics', 'Statistics', 'Quantitative_Biology', 'Quantitative_Finance']
+
             writer = csv.writer(output_csv_file)
             writer.writerow(header)
             for test_id, prob in zip(test_ids, probs.tolist()):

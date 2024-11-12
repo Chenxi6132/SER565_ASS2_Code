@@ -1,18 +1,3 @@
-predict:
-  calibrator_type: platt_scaling
-  calibrators_output_path: ./output
-  classes:
-  - Functionality_Test_Case
-  - User_Interface_Test_Case
-  - Performance_Test_Case
-  - Integration_Test_Case
-  - Usability_Test_Case
-  - Database_Test_Case
-  - Security_Test_Case
-  - User_Acceptance_Test_Case
-  debug_validation: false
-  enable_calibration: false
-  output_path: ./data/result.csv
 preprocessing:
   batch_size: 32
   classes:
@@ -30,21 +15,81 @@ preprocessing:
   input_testset: ./data/test.csv
   input_text_column: Description
   input_trainset: ./data/train.csv
-  maxlen: 128
+  maxlen: 32
   random_seed: 0
   skip_tokenization: false
   split_ratio: 0.3
+
 training:
   batch_normalization: true
   batch_size: 32
   dropout_rate: 0.5
   embedding_dim: 100
-  epochs: 80
+  epochs: 10
   gradient_cliping: true
   learning_rate: 0.8
-  maxlen: 128
+  maxlen: 32
   model_name: textrnn
   optimizer: sgd
   output_path: ./output
   predict_only: false
-  rnn_units: 150
+  rnn_units: 128
+
+predict:
+  classes:
+  - Functionality_Test_Case
+  - User_Interface_Test_Case
+  - Performance_Test_Case
+  - Integration_Test_Case
+  - Usability_Test_Case
+  - Database_Test_Case
+  - Security_Test_Case
+  - User_Acceptance_Test_Case
+  output_path: ./data/result.csv
+
+#######Test Cases########
+#    - Functionality_Test_Case
+#    - User_Interface_Test_Case
+#    - Performance_Test_Case
+#    - Integration_Test_Case
+#    - Usability_Test_Case
+#    - Database_Test_Case
+#    - Security_Test_Case
+#    - User_Acceptance_Test_Case
+
+####### Yotube Comment ###############   train_youtube.csv    test_youtube.csv
+#  -IsToxic
+#  -IsAbusive
+#  -IsThreat
+#  -IsProvocative
+#  -IsObscene
+#  -IsHatespeech
+#  -IsRacist
+#  -IsNationalist
+#  -IsSexist
+#  -IsHomophobic
+#  -IsReligiousHate
+#  -IsRadicalism
+
+####### Emotional dataset ############### emotion_test.csv  emotion_train.csv
+#  - anger
+#  - boredom
+#  - enthusiasm
+#  - fun
+#  - happiness
+#  - hate
+#  - love
+#  - neutral
+#  - relief
+#  - sadness
+#  - surprise
+#  - worry
+
+####### MultiLabel dataset ############### multiLabel_test.csv  multiLabel_train.csv
+#  - Computer Science
+#  - Physics
+#  - Mathematics
+#  - Statistics
+#  - Quantitative Biology
+#  - Quantitative Finance
+
