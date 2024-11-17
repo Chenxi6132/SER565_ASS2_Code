@@ -1,23 +1,24 @@
 from keras.models import Sequential
 from keras.optimizers import Adam
-from keras.layers import Embedding, SimpleRNN, Dense
+from keras.layers import Embedding, LSTM, Dense
+
 
 class TextRNN(object):
     def __init__(self, classes, config):
         self.classes = classes
         self.config = config
         self.num_classes = len(classes)
-
         self.model = self._build()
 
     def _build(self):
         model = Sequential()
         model.add(Embedding(self.config['vocab_size'], self.config['embedding_dim'], input_length=self.config['maxlen'], trainable=True))
-        model.add(SimpleRNN(self.config['rnn_units']))  # Use optimized RNN units
+        model.add(LSTM(self.config['rnn_units']))  # Use optimized RNN units
+        # mutli-class sigle label classification use softmax ,categorical_crossentropy
+        # multi-class multi-label classification use sigmoid, binary_crossentropy
         model.add(Dense(self.num_classes, activation='sigmoid'))
         optimizer = Adam(learning_rate=self.config['learning_rate'])  # dynamic learning rate
-
-        model.compile(optimizer=optimizer, loss='BinaryCrossentropy', metrics='accuracy')
+        model.compile(optimizer = optimizer, loss='binary_crossentropy', metrics='accuracy')
         model.summary()
         return model
 

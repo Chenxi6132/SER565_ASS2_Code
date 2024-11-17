@@ -8,8 +8,6 @@ import argparse
 import keras
 
 
-
-
 parser = argparse.ArgumentParser(description='process commandline')
 parser.add_argument('--config', type=str, required=True)
 parser.add_argument('--log_level', type=str, default="INFO")
@@ -81,7 +79,7 @@ def optimize_hyperparameters():
     if model_name ==  'textrnn':
         problem_dict = {
             # learning_rate between 0.01 and 1, batch_size between 16 and 128, dropout is between 0.2 and 0.5, embedding_dim between 50 and 300, epoch between 20 and 200,
-            # rnn_units between 50 and 150,
+            #  rnn_units between 50 and 150,
             "bounds": FloatVar(lb=[0.01,16, 50, 20, 50], ub=[1, 128, 300, 200,150], name="hyperparams"),
             "minmax": "min",  # Minimize the validation accuracy (actually maximize accuracy by returning -accuracy)
             "obj_func": objective_function

@@ -48,7 +48,7 @@ class Preprocessor(object):
             self.data_x, self.data_y,
             test_size= self.config['split_ratio'],
             random_state=self.config['random_seed'])
-
+        print("train_y shape:", self.train_y.shape)
         # define test dataset
         test_df = pd.read_csv(self.config['input_testset'])
         self.test_x, self.test_ids = self._parse(test_df, is_test=True)
