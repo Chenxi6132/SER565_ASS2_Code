@@ -1,15 +1,21 @@
 preprocessing:
   split_ratio: 0.3
-  input_trainset: ./data/multiLabel_train.csv
-  input_testset: ./data/multiLabel_test.csv
+  input_trainset: ./data/emotion_train.csv
+  input_testset: ./data/emotion_test.csv
   random_seed: 0
   classes:
-    - Computer Science
-    - Physics
-    - Mathematics
-    - Statistics
-    - Quantitative Biology
-    - Quantitative Finance
+    - anger
+    - boredom
+    - enthusiasm
+    - fun
+    - happiness
+    - hate
+    - love
+    - neutral
+    - relief
+    - sadness
+    - surprise
+    - worry
 
   input_text_column: Description
   input_id_column: Test_ID
@@ -18,6 +24,8 @@ preprocessing:
   batch_size: 32
   input_convertor: nn_vectorization
   embedding_dim: 100
+
+
 training:
   learning_rate: 0.8
   dropout_rate: 0.5
@@ -31,6 +39,12 @@ training:
   predict_only: false
   output_path: ./output
   model_name: textcnn
+  filters_1: 64
+  filters_2: 128
+  filters_3: 256
+  cnn_kernel_size: 7
+
+
 predict:
   output_path: ./data/result.csv
   enable_calibration: true
@@ -38,12 +52,18 @@ predict:
   calibrators_output_path: ./output
   debug_validation: false
   classes:
-    - Computer Science
-    - Physics
-    - Mathematics
-    - Statistics
-    - Quantitative Biology
-    - Quantitative Finance
+    - anger
+    - boredom
+    - enthusiasm
+    - fun
+    - happiness
+    - hate
+    - love
+    - neutral
+    - relief
+    - sadness
+    - surprise
+    - worry
 
 #######Test Cases########  .csv  HD_train.csv
 #    - Functionality_Test_Case

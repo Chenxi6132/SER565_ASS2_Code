@@ -7,7 +7,6 @@ import logging
 import argparse
 import keras
 
-
 parser = argparse.ArgumentParser(description='process commandline')
 parser.add_argument('--config', type=str, required=True)
 parser.add_argument('--log_level', type=str, default="INFO")
@@ -56,7 +55,7 @@ def objective_function(hyperparams):
 
 
     # Pad the sequences to ensure they have the same length
-    max_sequence_length = 32
+    max_sequence_length = config['training']['maxlen']
     train_x = keras.preprocessing.sequence.pad_sequences(train_x, maxlen=max_sequence_length, padding='post')
     validate_x = keras.preprocessing.sequence.pad_sequences(validate_x, maxlen=max_sequence_length, padding='post')
 
@@ -78,17 +77,17 @@ def optimize_hyperparameters():
     # Define the problem dictionary for hyperparameter optimization
     if model_name ==  'textrnn':
         problem_dict = {
-            # learning_rate between 0.01 and 1, batch_size between 16 and 128, dropout is between 0.2 and 0.5, embedding_dim between 50 and 300, epoch between 20 and 200,
+            # learning_rate between 0.01 and 1, batch_size between 16 and 128, dropout is between 0.2 and 0.5, embedding_dim between 50 and 300, epoch between 5 and 20,
             #  rnn_units between 50 and 150,
-            "bounds": FloatVar(lb=[0.01,16, 50, 20, 50], ub=[1, 128, 300, 200,150], name="hyperparams"),
+            "bounds": FloatVar(lb=[0.01,16, 50, 5, 50], ub=[1, 128, 300, 20,150], name="hyperparams"),
             "minmax": "min",  # Minimize the validation accuracy (actually maximize accuracy by returning -accuracy)
             "obj_func": objective_function
         }
     elif model_name == 'textcnn':
         problem_dict = {
-            # learning_rate between 0.01 and 1, batch_size between 16 and 128, dropout is between 0.2 and 0.5, embedding_dim between 50 and 300, epoch between 20 and 200,
+            # learning_rate between 0.01 and 1, batch_size between 16 and 128, dropout is between 0.2 and 0.5, embedding_dim between 50 and 300, epoch between 5 and 20,
             # cnn_filter1 between 32 and 256, cnn_filter2 between 32 and 256,, cnn_filter3 between 32 and 256, cnn_kernel_size 3 and 7
-            "bounds": FloatVar(lb=[0.01, 16, 50, 20, 32, 32, 32, 3], ub=[1, 128, 300, 200, 256, 256, 256,7], name="hyperparams"),
+            "bounds": FloatVar(lb=[0.01, 16, 50, 5, 32, 32, 32, 3], ub=[1, 128, 300, 20, 256, 256, 256,7], name="hyperparams"),
             "minmax": "min",  # Minimize the validation accuracy (actually maximize accuracy by returning -accuracy)
             "obj_func": objective_function
         }
@@ -100,7 +99,7 @@ def optimize_hyperparameters():
     problem_size = len(problem_dict["bounds"].ub)
     print(f"problem_size: {problem_size}")
     # Initialize the Grey Wolf Optimizer (GWO) model
-    gwo_model = GWO.OriginalGWO(problem_size= problem_size, epoch=15, pop_size=5)
+    gwo_model = GWO.OriginalGWO(problem_size= problem_size, epoch=5, pop_size=5)
 
     # Solve the optimization problem
     g_best = gwo_model.solve(problem_dict)
@@ -133,7 +132,8 @@ def optimize_hyperparameters():
     config['training']['epochs'] = best_epochs
     print(f"best_epochs: {best_epochs}")
 
-    if config['training']['model_name'] != 'textrnn':
+
+    if config['training']['model_name'] != 'textcnn':
         config['training']['filters_1'] = best_cnn_filter1
         print(f"best_cnn_filter1: {best_cnn_filter1}")
         config['training']['filters_2'] = best_cnn_filter2
@@ -143,7 +143,7 @@ def optimize_hyperparameters():
         config['training']['cnn_kernel_size'] = best_cnn_kernel_size
         print(f"best_cnn_kernel_size: {best_cnn_kernel_size}")
 
-    elif config['training']['model_name'] != 'textcnn':
+    elif config['training']['model_name'] != 'textrnn':
         config['training']['rnn_units'] = best_rnn_units
         print(f"best_rnn_units: {best_rnn_units}")
 

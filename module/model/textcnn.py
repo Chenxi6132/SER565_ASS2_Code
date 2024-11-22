@@ -8,15 +8,14 @@ class TextCNN(object):
         self.config = config
         self.model = self._build()
 
-
     def _build(self):
         model = Sequential()
         model.add(Embedding(self.config['vocab_size'], self.config['embedding_dim'], input_length=self.config['maxlen'], trainable=True))
-        model.add(Conv1D(64, 7, activation='relu', padding='same'))
+        model.add(Conv1D(self.config['filters_1'], self.config['cnn_kernel_size'], activation='relu', padding='same'))
         model.add(MaxPooling1D())
-        model.add(Conv1D(128, 7, activation='relu', padding='same'))
+        model.add(Conv1D(self.config['filters_2'], self.config['cnn_kernel_size'], activation='relu', padding='same'))
         model.add(MaxPooling1D())
-        model.add(Conv1D(256, 7, activation='relu', padding='same'))
+        model.add(Conv1D(self.config['filters_3'], self.config['cnn_kernel_size'], activation='relu', padding='same'))
         model.add(MaxPooling1D())
         model.add(MaxPooling1D())
         model.add(Flatten())

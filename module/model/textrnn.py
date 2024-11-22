@@ -1,6 +1,6 @@
 from keras.models import Sequential
 from keras.optimizers import Adam
-from keras.layers import Embedding, LSTM, Dense
+from keras.layers import Embedding, LSTM, Dense, Bidirectional, Dropout
 
 
 class TextRNN(object):
@@ -10,13 +10,15 @@ class TextRNN(object):
         self.num_classes = len(classes)
         self.model = self._build()
 
+
     def _build(self):
         model = Sequential()
         model.add(Embedding(self.config['vocab_size'], self.config['embedding_dim'], input_length=self.config['maxlen'], trainable=True))
-        model.add(LSTM(self.config['rnn_units']))  # Use optimized RNN units
+        model.add(Bidirectional(LSTM(self.config['rnn_units'], return_sequences=False)))  # Use optimized RNN units
+        model.add(Dropout(self.config['dropout_rate']))
         # mutli-class sigle label classification use softmax ,categorical_crossentropy
         # multi-class multi-label classification use sigmoid, binary_crossentropy
-        model.add(Dense(self.num_classes, activation='sigmoid'))
+        model.add(Dense(self.num_classes, activation='softmax'))
         optimizer = Adam(learning_rate=self.config['learning_rate'])  # dynamic learning rate
         model.compile(optimizer = optimizer, loss='binary_crossentropy', metrics='accuracy')
         model.summary()
