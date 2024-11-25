@@ -1,6 +1,8 @@
 import argparse
 import logging
 import yaml
+import gc
+from tensorflow.keras import backend as K
 from module import Preprocessor, Trainer, Predictor
 
 if __name__ == "__main__":
@@ -15,6 +17,12 @@ if __name__ == "__main__":
 
     logger.info("start!!")
 
+    # Cleanup: Delete the model
+
+    K.clear_session()  # Clear TensorFlow/Keras backend session
+    gc.collect()  # Force garbage collection to free up memory
+    logger.info("Model deleted and memory cleaned up.")
+
     with open(args.config, 'r') as config_file:
         try:
             config = yaml.safe_load(config_file)
@@ -25,12 +33,10 @@ if __name__ == "__main__":
             if config['training']['model_name'] != 'naivebayse':
                 config['training']['vocab_size'] = len(preprocessor.word2ind.keys())
 
-            # call GWO- optimizer
-
-
             trainer = Trainer(config['training'], logger, preprocessor.classes)
             full_model = trainer.fit(data_x, data_y)
 
+            accuracy_score = trainer.validate_accuracy(validate_x, validate_y)
             accuracy, cls_report = trainer.validate(validate_x, validate_y)
             logger.info("accuracy:{}".format(accuracy))
             logger.info("\n{}\n".format(cls_report))
@@ -38,6 +44,8 @@ if __name__ == "__main__":
             predictor = Predictor(config['predict'],logger, full_model)
             probs = predictor.predict_prob(test_x)
             result = predictor.save_result(preprocessor.test_ids, probs)
+
+            del full_model  # Mark the model object for deletion
 
         except yaml.YAMLError as err:
             logger.warning("config file has error: {}" .format(err))

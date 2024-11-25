@@ -16,13 +16,13 @@ class Predictor(object):
 
     def save_result(self, test_ids, probs):
         with open(self.config['output_path'], 'w', newline='') as output_csv_file:
-            # header = ['Test_ID', 'Functionality_Test_Case', 'User_Interface_Test_Case', 'Performance_Test_Case' 'Integration_Test_Case', 'Usability_Test_Case', 'Database_Test_Case', 'Security_Test_Case', 'User_Acceptance_Test_Case']
+            header = ['Test_ID', 'Functionality_Test_Case', 'User_Interface_Test_Case', 'Performance_Test_Case' 'Integration_Test_Case', 'Usability_Test_Case', 'Database_Test_Case', 'Security_Test_Case', 'User_Acceptance_Test_Case']
 
             # Emotional header
-            header = ['Test_ID', 'anger', 'boredom', 'enthusiasm', 'fun', 'happiness', 'hate', 'love', 'neutral', 'relief', 'sadness', 'surprise', 'worry']
+            # header = ['Test_ID', 'anger', 'boredom', 'enthusiasm', 'fun', 'happiness', 'hate', 'love', 'neutral', 'relief', 'sadness', 'surprise', 'worry']
 
-            # MultiLabel header
-            # header = ['Test_ID', 'Computer_Science', 'Physics', 'Mathematics', 'Statistics', 'Quantitative_Biology', 'Quantitative_Finance']
+            # Grocery header
+            # header = ['Test_ID', 'baby_products', 'beauty', 'grocery_gourmet_food', 'health_personal_care', 'pet_supplies', 'toys_games']
 
             writer = csv.writer(output_csv_file)
             writer.writerow(header)

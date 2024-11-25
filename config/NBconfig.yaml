@@ -1,21 +1,17 @@
 preprocessing:
   split_ratio: 0.3
-  input_trainset: ./data/emotion_train.csv
-  input_testset: ./data/emotion_test.csv
+  input_trainset: ./data/HD_test.csv
+  input_testset: ./data/HD_train.csv
   random_seed: 0
   classes:
-    - anger
-    - boredom
-    - enthusiasm
-    - fun
-    - happiness
-    - hate
-    - love
-    - neutral
-    - relief
-    - sadness
-    - surprise
-    - worry
+    - Functionality_Test_Case
+    - User_Interface_Test_Case
+    - Performance_Test_Case
+    - Integration_Test_Case
+    - Usability_Test_Case
+    - Database_Test_Case
+    - Security_Test_Case
+    - User_Acceptance_Test_Case
   input_text_column: Description
   input_id_column: Test_ID
   maxlen: 128
@@ -42,21 +38,19 @@ predict:
   calibrators_output_path: ./output
   debug_validation: false
   classes:
-    - anger
-    - boredom
-    - enthusiasm
-    - fun
-    - happiness
-    - hate
-    - love
-    - neutral
-    - relief
-    - sadness
-    - surprise
-    - worry
+    - Functionality_Test_Case
+    - User_Interface_Test_Case
+    - Performance_Test_Case
+    - Integration_Test_Case
+    - Usability_Test_Case
+    - Database_Test_Case
+    - Security_Test_Case
+    - User_Acceptance_Test_Case
 
 
-#######Test Cases########  .csv  HD_train.csv
+#######Test Cases########  HD_test.csv  HD_train.csv
+#  input_trainset: ./data/HD_test.csv
+#  input_testset: ./data/HD_train.csv
 #    - Functionality_Test_Case
 #    - User_Interface_Test_Case
 #    - Performance_Test_Case
@@ -67,24 +61,31 @@ predict:
 #    - User_Acceptance_Test_Case
 
 
-####### Emotional dataset ############### emotion_test.csv  emotion_train.csv
-#    - anger
-#    - boredom
-#    - enthusiasm
-#    - fun
-#    - happiness
-#    - hate
-#    - love
-#    - neutral
-#    - relief
-#    - sadness
-#    - surprise
-#    - worry
 
-####### MultiLabel dataset ############### multiLabel_test.csv  multiLabel_train.csv
-#  - Computer Science
-#  - Physics
-#  - Mathematics
-#  - Statistics
-#  - Quantitative Biology
-#  - Quantitative Finance
+####### Emotional dataset ############### emotion_test.csv  emotion_train.csv
+#  input_trainset: ./data/emotion_train.csv
+#  input_testset: ./data/emotion_test.csv
+#  - anger
+#  - boredom
+#  - enthusiasm
+#  - fun
+#  - happiness
+#  - hate
+#  - love
+#  - neutral
+#  - relief
+#  - sadness
+#  - surprise
+#  - worry
+
+
+
+####### Grocery dataset ############### Grocery_test.csv  Grocery_train.csv
+#  input_trainset: ./data/Grocery_train.csv
+#  input_testset: ./data/Grocery_test.csv
+#  - baby_products
+#  - beauty
+#  - grocery_gourmet_food
+#  - health_personal_care
+#  - pet_supplies
+#  - toys_games

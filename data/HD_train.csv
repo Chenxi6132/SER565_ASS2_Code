@@ -1,201 +1,201 @@
 ﻿Description,Test_ID,Functionality_Test_Case,User_Interface_Test_Case,Performance_Test_Case,Integration_Test_Case,Usability_Test_Case,Database_Test_Case,Security_Test_Case,User_Acceptance_Test_Case
-All mandatory fields should be validated and indicated by an asterisk (*) symbol.,TC_0001,1,0,0,0,1,1,0,1
-Validation error messages should be displayed properly in the correct position.,TC_0002,0,0,1,0,1,1,1,0
-"All error messages should be displayed in the same CSS style (For Example, using red color)",TC_0003,1,0,1,1,0,0,0,1
-"General confirmation messages should be displayed using CSS style other than error messages style (For Example, using green color)",TC_0004,1,1,1,1,1,0,0,0
-Tooltips text should be meaningful.,TC_0005,1,1,1,0,0,1,1,0
-Drop-down fields should have the first entry as blank or text like ‘Select’.,TC_0006,1,0,0,1,1,1,0,1
-‘Delete functionality’ for any record on a page should ask for a confirmation.,TC_0007,0,1,0,1,1,1,1,1
-Select/deselect all records option should be provided if page supports record add/delete/update functionality,TC_0008,1,1,1,1,0,0,1,0
-Amount values should be displayed with correct currency symbols.,TC_0009,0,1,0,0,1,1,0,0
-Default page sorting should be provided.,TC_0010,1,1,0,1,1,0,0,1
-Reset button functionality should set default values for all fields.,TC_0011,1,0,0,0,1,0,0,0
-All numeric values should be formatted properly.,TC_0012,1,1,0,1,1,0,0,1
-Input fields should be checked for the max field value. Input values greater than the specified max limit should not be accepted or stored in the database.,TC_0013,1,1,1,0,1,1,1,0
-Check all input fields for special characters.,TC_0014,0,0,0,0,1,0,1,0
-Field labels should be standard e.g. field accepting user’s first name should be labeled properly as ‘First Name’.,TC_0015,1,0,0,0,0,0,0,1
-Check page sorting functionality after add/edit/delete operations on any record.,TC_0016,1,1,1,0,0,1,1,1
-Check for timeout functionality. Timeout values should be configurable. Check application behavior after the operation timeout.,TC_0017,0,1,1,1,1,0,0,1
-Check cookies used in an application.,TC_0018,0,0,1,1,1,0,0,1
-Check if downloadable files are pointing to the correct file paths.,TC_0019,1,0,1,1,0,0,0,0
-All resource keys should be configurable in config files or database instead of hard coding.,TC_0020,1,0,0,0,0,1,1,1
-Standard conventions should be followed throughout for naming resource keys.,TC_0021,1,0,0,0,1,1,1,0
-Validate markup for all web pages (validate HTML and CSS for syntax errors) to make sure it is compliant with the standards.,TC_0022,1,1,1,0,1,0,0,1
-Application crash or unavailable pages should be redirected to the error page.,TC_0023,1,1,1,0,1,1,0,0
-Check the text on all pages for spelling and grammatical errors.,TC_0024,0,0,1,1,1,0,0,1
-Check numeric input fields with character input values. A proper validation message should appear.,TC_0025,1,0,1,0,1,0,1,1
-Check for negative numbers if allowed for numeric fields.,TC_0026,1,0,1,1,1,1,1,0
-Check the number of fields with decimal number values.,TC_0027,0,0,1,0,1,0,0,1
-Check the functionality of buttons available on all pages.,TC_0028,1,1,0,0,1,1,0,0
-The user should not be able to submit a page twice by pressing the submit button in quick succession.,TC_0029,0,0,0,1,1,0,0,0
-Divide by zero errors should be handled for any calculations.,TC_0030,0,1,1,1,1,0,0,1
-Input data with the first and last position blank should be handled correctly.,TC_0031,0,0,1,1,1,1,1,0
-"All fields on a page (For Example, text box, radio options, drop-down lists) should be aligned properly.",TC_0032,0,1,0,1,0,0,1,1
-Numeric values should be justified correctly unless specified otherwise.,TC_0033,1,1,0,1,1,0,1,0
-"Enough space should be provided between field labels, columns, rows, error messages, etc.",TC_0034,0,1,0,1,1,0,0,0
-The scrollbar should be enabled only when necessary.,TC_0035,1,0,0,1,1,1,0,1
-"Font size, style, and color for headline, description text, labels, infield data, and grid info should be standard as specified in SRS.",TC_0036,0,0,0,1,1,1,1,0
-The description text box should be multi-lined.,TC_0037,0,0,0,1,1,1,1,1
-Disabled fields should be greyed out and users should not be able to set focus on these fields.,TC_0038,1,1,0,1,1,0,1,1
-"Upon click of an input text field, the mouse arrow pointer should get changed to the cursor.",TC_0039,0,1,1,0,0,0,1,1
-The user should not be able to type in drop-down select lists.,TC_0040,0,1,1,1,0,0,0,0
-Information filled by users should remain intact when there is an error message on page submit. The user should be able to submit the form again by correcting the errors.,TC_0041,0,0,0,0,1,1,0,0
-Check if proper field labels are used in error messages.,TC_0042,0,1,0,0,1,0,1,1
-Drop-down field values should be displayed in defined sort order.,TC_0043,1,1,1,0,0,1,1,1
-Tab and Shift+Tab order should work properly.,TC_0044,1,0,0,0,1,1,0,0
-Default radio options should be pre-selected on the page load.,TC_0045,1,0,1,0,1,1,1,0
-Field-specific and page-level help messages should be available.,TC_0046,1,1,0,1,1,0,1,1
-Check if the correct fields are highlighted in case of errors.,TC_0047,0,1,0,0,0,0,0,1
-Check if the drop-down list options are readable and not truncated due to field size limits.,TC_0048,0,1,0,0,1,1,0,1
-All buttons on a page should be accessible by keyboard shortcuts and the user should be able to perform all operations using a keyboard.,TC_0049,0,0,0,1,1,1,0,0
-Check all pages for broken images.,TC_0050,0,1,1,1,0,0,0,0
-Check all pages for broken links.,TC_0051,1,0,1,1,1,1,1,0
-All pages should have a title.,TC_0052,0,0,0,0,0,0,0,0
-Confirmation messages should be displayed before performing any update or delete operation.,TC_0053,1,1,0,1,0,0,0,1
-Hourglass should be displayed when the application is busy.,TC_0054,0,1,1,1,0,1,0,0
-Page text should be left-justified.,TC_0055,1,1,1,0,1,1,1,0
-The user should be able to select only one radio option and any combination for checkboxes.,TC_0056,0,0,1,1,0,0,1,0
-The user should be able to filter results using all parameters on the page.,TC_0057,1,0,0,1,1,1,0,1
-Refine search functionality should load the search page with all user-selected search parameters.,TC_0058,0,1,0,0,0,1,0,0
-"When there are at least one filter criteria required to perform the search operation, make sure the proper error message is displayed when the user submits the page without selecting any filter criteria.",TC_0059,1,1,1,0,0,0,1,0
-"When at least one filter criteria selection is not compulsory, the user should be able to submit the page and the default search criteria should get used to query results.",TC_0060,0,0,0,0,0,0,1,1
-Proper validation messages should be displayed for all invalid values for filter criteria.,TC_0061,0,0,0,0,1,1,1,1
-Page loading symbol should be displayed when it’s taking more than default time to load the result page.,TC_0062,0,1,0,1,0,1,1,1
-Check if all the search parameters are used to fetch data shown on the result grid.,TC_0063,1,1,0,0,0,1,1,0
-The total number of results should be displayed in the result grid.,TC_0064,0,1,1,0,1,1,0,1
-Search criteria used for searching should be displayed in the result grid.,TC_0065,0,0,0,1,0,0,1,1
-Result grid values should be sorted by default column.,TC_0066,0,0,0,0,1,0,1,0
-Sorted columns should be displayed with a sort icon.,TC_0067,0,0,0,1,0,1,0,1
-Result grids should include all the specified columns with correct values.,TC_0068,1,0,0,0,1,0,0,0
-Ascending and descending sorting functionality should work for columns supported by data sorting.,TC_0069,0,0,1,1,1,0,0,1
-Result grids should be displayed with proper column and row spacing.,TC_0070,0,1,1,0,0,1,1,1
-Pagination should be enabled when there are more results than the default result count per page.,TC_0071,0,1,0,0,0,0,1,0
-"Check for Next, Previous, First and Last page pagination functionality.",TC_0072,0,1,1,0,1,0,0,1
-Duplicate records should not be displayed in the result grid.,TC_0073,1,1,1,0,0,1,0,1
-Check if all the columns are visible and a horizontal scrollbar is enabled if necessary.,TC_0074,1,1,1,1,1,1,1,0
-Check the data for dynamic columns (columns whose values are calculated dynamically based on the other column values).,TC_0075,0,0,1,1,1,1,1,1
-For result grids showing reports check ‘Totals’ row and verify the total for every column.,TC_0076,0,0,0,0,1,0,1,0
-For result grids showing reports check ‘Totals’ row data when pagination is enabled and the user gets navigated to the next page.,TC_0077,1,0,1,1,1,0,1,1
-Check if proper symbols are used for displaying column values e.g. % symbol should be displayed for percentage calculation.,TC_0078,0,1,0,1,1,1,1,1
-Check result grid data to know if the date range is enabled.,TC_0079,0,0,1,1,1,0,1,0
-Test Scenarios For A Window,TC_0080,1,1,0,1,0,0,0,0
-Check if the default window size is correct.,TC_0081,0,0,0,1,0,1,0,0
-Check if the child window size is correct.,TC_0082,1,0,0,0,1,0,0,0
-"Check if there is any field on the page with default focus (in general, the focus should be set on the first input field of the screen).",TC_0083,0,0,0,1,1,1,0,0
-Check if child windows are getting closed on closing parent/opener window.,TC_0084,0,1,0,0,0,1,0,0
-"If the child window is opened, the user should not be able to use or update any field in the background or parent window",TC_0085,0,1,1,0,1,1,1,1
-"Check window minimize, maximize, and close functionality.",TC_0086,0,0,1,0,1,0,1,0
-Check if the window is re-sizable.,TC_0087,1,0,0,0,1,1,1,0
-Check scroll bar functionality for parent and child windows.,TC_0088,0,1,1,1,1,0,1,0
-Check cancel button functionality for the child window.,TC_0089,1,1,1,1,1,0,0,1
-Check if correct data is getting saved in the database upon a successful page submit.,TC_0090,1,1,0,0,1,0,1,1
-Check values for columns that are not accepting null values.,TC_0091,1,1,1,1,0,1,1,0
-Check for data integrity. Data should be stored in single or multiple tables based on the design.,TC_0092,0,1,0,1,0,0,0,0
-Index names should be given as per the standards e.g. IND_<Tablename>_<ColumnName>,TC_0093,1,0,1,0,1,0,1,0
-Tables should have a primary key column.,TC_0094,0,0,0,0,0,1,0,0
-"Table columns should have description information available (except for audit columns like created date, created by, etc.)",TC_0095,1,1,0,1,1,0,0,1
-For every database add/update operation log should be added.,TC_0096,1,1,1,1,0,1,1,1
-Required table indexes should be created.,TC_0097,1,1,0,0,1,0,0,0
-Check if data is committed to the database only when the operation is successfully completed.,TC_0098,0,0,1,1,0,0,0,1
-Data should be rolled back in case of failed transactions.,TC_0099,0,0,0,0,1,1,1,1
-"Database name should be given as per the application type i.e. test, UAT, sandbox, live (though this is not a standard it is helpful for database maintenance)",TC_0100,0,1,1,0,0,1,1,1
-Database logical names should be given according to the database name (again this is not standard but helpful for DB maintenance).,TC_0101,1,0,1,1,1,0,1,0
-Stored procedures should not be named with a prefix “sp_”,TC_0102,1,1,0,0,0,1,0,0
-"Check if values for table audit columns (like created date, created by, updated, updated by, is deleted, deleted data, deleted by, etc.) are populated properly.",TC_0103,0,0,1,1,0,1,1,1
-Check if input data is not truncated while saving. Field length shown to the user on the page and in database schema should be the same.,TC_0104,1,1,1,0,0,1,0,0
-"Check numeric fields with minimum, maximum, and float values.",TC_0105,1,1,1,0,1,0,0,0
-Check numeric fields with negative values (for both acceptance and non-acceptance).,TC_0106,0,1,1,1,0,0,0,0
-Check if the radio button and drop-down list options are saved correctly in the database.,TC_0107,1,0,1,1,0,0,0,1
-Check if the database fields are designed with the correct data type and data length.,TC_0108,1,1,1,1,0,1,0,0
-"Check if all the table constraints like a Primary key, Foreign key, etc. are implemented correctly.",TC_0109,1,1,0,0,0,1,0,0
-Test stored procedures and triggers with sample input data.,TC_0110,0,0,0,0,0,1,0,0
-Input field leading and trailing spaces should be truncated before committing data to the database.,TC_0111,1,0,1,1,1,1,0,1
-Null values should not be allowed for the Primary key column.,TC_0112,1,1,1,1,0,1,0,0
-Check for uploaded image path.,TC_0113,0,1,0,0,1,0,1,0
-Check image upload and change functionality.,TC_0114,0,0,0,0,0,0,0,0
-"Check image upload functionality with image files of different extensions (For Example, JPEG, PNG, BMP, etc.)",TC_0115,1,0,0,1,1,0,0,1
-Check image upload functionality with images having space or any other allowed special character in the file name.,TC_0116,0,0,0,1,1,1,1,0
-Check duplicate name image upload.,TC_0117,0,1,0,0,1,0,0,0
-Check image upload with image size greater than the max allowed size. The Proper error message should be displayed.,TC_0118,0,1,0,1,0,1,0,1
-"Check image upload functionality with file types other than images (For Example, txt, doc, pdf, exe, etc.). A proper error message should be displayed.",TC_0119,1,1,0,1,1,0,1,1
-Check if images of specified height and width (if defined) are accepted otherwise rejected.,TC_0120,1,1,1,0,0,1,0,1
-The image upload progress bar should appear for large size images.,TC_0121,0,0,1,1,1,1,0,0
-Check if the cancel button functionality is working in between the upload process.,TC_0122,1,0,0,0,1,0,1,1
-Check if file selection dialog shows only supported files listed.,TC_0123,0,1,0,0,0,0,1,1
-Check multiple images upload functionality.,TC_0124,1,0,1,1,0,0,1,1
-Check image quality after upload. Image quality should not be changed after upload.,TC_0125,0,1,0,1,0,0,1,1
-The email template should use standard CSS for all emails.,TC_0126,0,0,1,0,0,1,0,0
-Email addresses should be validated before sending emails.,TC_0127,0,1,0,0,1,0,0,1
-Special characters in the email body template should be handled properly.,TC_0128,1,1,0,1,1,1,0,1
-"Language-specific characters (For Example, Russian, Chinese or German language characters) should be handled properly in the email body template.",TC_0129,0,1,1,1,0,1,0,0
-Email subject should not be blank.,TC_0130,1,1,1,1,1,1,1,1
-Placeholder fields used in the email template should be replaced with actual values e.g. {Firstname} {Lastname} should be replaced with an individual’s first and last name properly for all the recipients.,TC_0131,0,0,1,0,1,1,0,0
-If reports with dynamic values are included in the email body and report data should be calculated correctly.,TC_0132,0,1,1,0,0,0,0,1
-Email sender name should not be blank.,TC_0133,1,0,0,1,1,1,1,1
-"Emails should be checked in different email clients like Outlook, Gmail, Hotmail, Yahoo! mail, etc.",TC_0134,0,1,0,0,0,1,0,0
-"Check to send email functionality using TO, CC and BCC fields.",TC_0135,1,0,0,0,0,0,0,0
-Check plain text emails.,TC_0136,1,0,1,0,0,0,1,0
-Check HTML format emails.,TC_0137,1,1,0,0,0,1,1,1
-"Check email header and footer for company logo, privacy policy, and other links.",TC_0138,1,1,0,0,0,0,0,1
-Check emails with attachments.,TC_0139,0,0,1,0,0,1,0,0
-"Check to send email functionality to single, multiple or distribution list recipients.",TC_0140,1,0,1,0,0,0,1,1
-Check if a reply to the email address is correct.,TC_0141,1,0,1,1,0,1,0,1
-Check to send the high volume of emails.,TC_0142,1,1,0,0,1,1,1,0
-Test Scenarios For Excel Export Functionality,TC_0143,0,1,1,0,0,0,1,1
-The file should get exported in the proper file extension.,TC_0144,1,0,0,0,1,0,1,0
-"The file name for the exported Excel file should be as per the standards, For Example, if the file name is using the timestamp, it should get replaced properly with an actual timestamp at the time of exporting the file.",TC_0145,0,0,1,0,1,1,1,1
-Check for date format if exported Excel file contains the date columns.,TC_0146,0,1,0,0,1,1,0,0
-Check number formatting for numeric or currency values. Formatting should be the same as shown on the page.,TC_0147,0,0,1,0,0,1,0,1
-The exported file should have columns with proper column names.,TC_0148,1,0,0,1,1,0,0,0
-Default page sorting should be carried in the exported file as well.,TC_0149,0,0,1,1,0,0,0,0
-"Excel file data should be formatted properly with header and footer text, date, page numbers, etc. values for all pages.",TC_0150,1,1,1,1,0,0,1,0
-Check if the data displayed on a page and exported Excel file is the same.,TC_0151,0,1,0,1,0,1,1,1
-Check export functionality when pagination is enabled.,TC_0152,0,0,1,0,1,1,1,0
-"Check if the export button is showing proper icon according to the exported file type, For Example, Excel file icon for xls files",TC_0153,1,0,0,0,1,1,0,1
-Check export functionality for files with very large size.,TC_0154,0,1,1,1,1,1,1,1
-Check export functionality for pages containing special characters. Check if these special characters are exported properly in the Excel file.,TC_0155,0,1,1,0,0,1,0,1
-Performance Testing Test Scenarios,TC_0156,1,0,0,1,0,0,1,1
-Check if the page load time is within the acceptable range.,TC_0157,0,0,1,0,0,1,1,0
-Check the page load on slow connections.,TC_0158,1,1,1,0,0,1,1,1
-"Check the response time for any action under a light, normal, moderate, and heavy load conditions.",TC_0159,1,1,0,0,0,1,1,1
-Check the performance of database stored procedures and triggers.,TC_0160,0,0,1,0,0,1,0,1
-Check the database query execution time.,TC_0161,1,1,1,0,0,0,0,1
-Check for load testing of the application.,TC_0162,1,0,1,0,0,1,1,1
-Check for the Stress testing of the application.,TC_0163,1,0,1,0,0,1,1,0
-Check CPU and memory usage under peak load conditions.,TC_0164,0,1,1,0,1,0,1,0
-Security Testing Test Scenarios,TC_0165,1,1,0,0,1,0,0,1
-Check for SQL injection attacks.,TC_0166,1,0,1,0,1,1,1,1
-Secure pages should use the HTTPS protocol.,TC_0167,1,0,0,0,0,1,1,1
-Page crash should not reveal application or server info. The error page should be displayed for this.,TC_0168,1,0,1,1,1,0,0,1
-Escape special characters in the input.,TC_0169,1,0,0,0,0,1,1,0
-Error messages should not reveal any sensitive information.,TC_0170,1,1,1,0,1,1,0,1
-All credentials should be transferred over an encrypted channel.,TC_0171,1,1,1,0,0,0,0,1
-Test password security and password policy enforcement.,TC_0172,0,1,1,1,0,1,0,0
-Check application logout functionality.,TC_0173,0,0,0,1,0,1,0,1
-Check for Brute Force Attacks.,TC_0174,1,1,1,1,1,1,1,0
-Cookie information should be stored in encrypted format only.,TC_0175,1,0,0,0,0,0,1,0
-Check session cookie duration and session termination after timeout or logout.,TC_0176,0,0,0,0,1,0,0,0
-Session tokens should be transmitted over a secured channel.,TC_0177,0,0,1,0,0,1,0,0
-The password should not be stored in cookies.,TC_0178,0,0,0,0,0,1,0,1
-Test for Denial of Service attacks.,TC_0179,1,1,0,0,0,1,1,0
-Test for memory leakage.,TC_0180,0,1,1,0,1,0,1,1
-Test unauthorized application access by manipulating variable values in the browser address bar.,TC_0181,1,1,1,1,0,0,1,0
-Test file extension handing so that exe files are not uploaded and executed on the server.,TC_0182,1,1,0,0,1,0,1,1
-Sensitive fields like passwords and credit card information should not have to autocomplete enabled.,TC_0183,0,1,0,0,1,0,1,0
-File upload functionality should use file type restrictions and also anti-virus for scanning uploaded files.,TC_0184,1,0,0,1,1,0,0,1
-Check if directory listing is prohibited.,TC_0185,0,0,0,0,1,1,0,0
-Passwords and other sensitive fields should be masked while typing.,TC_0186,0,0,0,0,0,1,0,0
-Check if forgot password functionality is secured with features like temporary password expiry after specified hours and security question is asked before changing or requesting a new password.,TC_0187,1,1,0,0,0,1,0,1
-Verify CAPTCHA functionality.,TC_0188,1,0,1,0,0,0,0,1
-Check if important events are logged in log files.,TC_0189,1,0,1,1,1,0,0,1
-Check if access privileges are implemented correctly.,TC_0190,1,1,0,0,0,0,1,0
-environment to be production,TC_0191,1,1,1,1,0,1,1,1
-Verify successful user login with valid credentials.,TC_0192,0,0,0,1,0,1,1,0
-API response must be valid and have a body,TC_0193,1,1,1,1,1,1,1,0
-Ensure invalid inputs are rejected with appropriate error messages.,TC_0194,0,1,0,1,0,0,1,1
-Test application performance under high user load.,TC_0195,1,1,1,0,1,0,1,0
-Confirm that all links and buttons navigate to the correct pages.,TC_0196,1,1,0,0,1,1,1,1
-"Validate data integrity when performing CRUD (Create, Read, Update, Delete) operations.",TC_0197,1,0,0,1,1,1,1,0
-Verify compatibility across different browsers and devices.,TC_0198,0,1,1,0,1,0,1,1
-Ensure application responsiveness on varying screen sizes.,TC_0199,0,0,1,0,1,0,0,1
-Test the accuracy of search functionality with diverse queries.,TC_0200,1,0,0,1,1,1,1,1
+All mandatory fields should be validated and indicated by an asterisk (*) symbol.,1,1,0,0,0,1,1,0,1
+Validation error messages should be displayed properly in the correct position.,2,0,0,1,0,1,1,1,0
+"All error messages should be displayed in the same CSS style (For Example, using red color)",3,1,0,1,1,0,0,0,1
+"General confirmation messages should be displayed using CSS style other than error messages style (For Example, using green color)",4,1,1,1,1,1,0,0,0
+Tooltips text should be meaningful.,5,1,1,1,0,0,1,1,0
+Drop-down fields should have the first entry as blank or text like ??Select??.,6,1,0,0,1,1,1,0,1
+Delete functionality?? for any record on a page should ask for a confirmation.,7,0,1,0,1,1,1,1,1
+Select/deselect all records option should be provided if page supports record add/delete/update functionality,8,1,1,1,1,0,0,1,0
+Amount values should be displayed with correct currency symbols.,9,0,1,0,0,1,1,0,0
+Default page sorting should be provided.,10,1,1,0,1,1,0,0,1
+Reset button functionality should set default values for all fields.,11,1,0,0,0,1,0,0,0
+All numeric values should be formatted properly.,12,1,1,0,1,1,0,0,1
+Input fields should be checked for the max field value. Input values greater than the specified max limit should not be accepted or stored in the database.,13,1,1,1,0,1,1,1,0
+Check all input fields for special characters.,14,0,0,0,0,1,0,1,0
+Field labels should be standard e.g. field accepting user??s first name should be labeled properly as ??First Name??.,15,1,0,0,0,0,0,0,1
+Check page sorting functionality after add/edit/delete operations on any record.,16,1,1,1,0,0,1,1,1
+Check for timeout functionality. Timeout values should be configurable. Check application behavior after the operation timeout.,17,0,1,1,1,1,0,0,1
+Check cookies used in an application.,18,0,0,1,1,1,0,0,1
+Check if downloadable files are pointing to the correct file paths.,19,1,0,1,1,0,0,0,0
+All resource keys should be configurable in config files or database instead of hard coding.,20,1,0,0,0,0,1,1,1
+Standard conventions should be followed throughout for naming resource keys.,21,1,0,0,0,1,1,1,0
+Validate markup for all web pages (validate HTML and CSS for syntax errors) to make sure it is compliant with the standards.,22,1,1,1,0,1,0,0,1
+Application crash or unavailable pages should be redirected to the error page.,23,1,1,1,0,1,1,0,0
+Check the text on all pages for spelling and grammatical errors.,24,0,0,1,1,1,0,0,1
+Check numeric input fields with character input values. A proper validation message should appear.,25,1,0,1,0,1,0,1,1
+Check for negative numbers if allowed for numeric fields.,26,1,0,1,1,1,1,1,0
+Check the number of fields with decimal number values.,27,0,0,1,0,1,0,0,1
+Check the functionality of buttons available on all pages.,28,1,1,0,0,1,1,0,0
+The user should not be able to submit a page twice by pressing the submit button in quick succession.,29,0,0,0,1,1,0,0,0
+Divide by zero errors should be handled for any calculations.,30,0,1,1,1,1,0,0,1
+Input data with the first and last position blank should be handled correctly.,31,0,0,1,1,1,1,1,0
+"All fields on a page (For Example, text box, radio options, drop-down lists) should be aligned properly.",32,0,1,0,1,0,0,1,1
+Numeric values should be justified correctly unless specified otherwise.,33,1,1,0,1,1,0,1,0
+"Enough space should be provided between field labels, columns, rows, error messages, etc.",34,0,1,0,1,1,0,0,0
+The scrollbar should be enabled only when necessary.,35,1,0,0,1,1,1,0,1
+"Font size, style, and color for headline, description text, labels, infield data, and grid info should be standard as specified in SRS.",36,0,0,0,1,1,1,1,0
+The description text box should be multi-lined.,37,0,0,0,1,1,1,1,1
+Disabled fields should be greyed out and users should not be able to set focus on these fields.,38,1,1,0,1,1,0,1,1
+"Upon click of an input text field, the mouse arrow pointer should get changed to the cursor.",39,0,1,1,0,0,0,1,1
+The user should not be able to type in drop-down select lists.,40,0,1,1,1,0,0,0,0
+Information filled by users should remain intact when there is an error message on page submit. The user should be able to submit the form again by correcting the errors.,41,0,0,0,0,1,1,0,0
+Check if proper field labels are used in error messages.,42,0,1,0,0,1,0,1,1
+Drop-down field values should be displayed in defined sort order.,43,1,1,1,0,0,1,1,1
+Tab and Shift+Tab order should work properly.,44,1,0,0,0,1,1,0,0
+Default radio options should be pre-selected on the page load.,45,1,0,1,0,1,1,1,0
+Field-specific and page-level help messages should be available.,46,1,1,0,1,1,0,1,1
+Check if the correct fields are highlighted in case of errors.,47,0,1,0,0,0,0,0,1
+Check if the drop-down list options are readable and not truncated due to field size limits.,48,0,1,0,0,1,1,0,1
+All buttons on a page should be accessible by keyboard shortcuts and the user should be able to perform all operations using a keyboard.,49,0,0,0,1,1,1,0,0
+Check all pages for broken images.,50,0,1,1,1,0,0,0,0
+Check all pages for broken links.,51,1,0,1,1,1,1,1,0
+All pages should have a title.,52,0,0,0,0,0,0,0,0
+Confirmation messages should be displayed before performing any update or delete operation.,53,1,1,0,1,0,0,0,1
+Hourglass should be displayed when the application is busy.,54,0,1,1,1,0,1,0,0
+Page text should be left-justified.,55,1,1,1,0,1,1,1,0
+The user should be able to select only one radio option and any combination for checkboxes.,56,0,0,1,1,0,0,1,0
+The user should be able to filter results using all parameters on the page.,57,1,0,0,1,1,1,0,1
+Refine search functionality should load the search page with all user-selected search parameters.,58,0,1,0,0,0,1,0,0
+"When there are at least one filter criteria required to perform the search operation, make sure the proper error message is displayed when the user submits the page without selecting any filter criteria.",59,1,1,1,0,0,0,1,0
+"When at least one filter criteria selection is not compulsory, the user should be able to submit the page and the default search criteria should get used to query results.",60,0,0,0,0,0,0,1,1
+Proper validation messages should be displayed for all invalid values for filter criteria.,61,0,0,0,0,1,1,1,1
+Page loading symbol should be displayed when it??s taking more than default time to load the result page.,62,0,1,0,1,0,1,1,1
+Check if all the search parameters are used to fetch data shown on the result grid.,63,1,1,0,0,0,1,1,0
+The total number of results should be displayed in the result grid.,64,0,1,1,0,1,1,0,1
+Search criteria used for searching should be displayed in the result grid.,65,0,0,0,1,0,0,1,1
+Result grid values should be sorted by default column.,66,0,0,0,0,1,0,1,0
+Sorted columns should be displayed with a sort icon.,67,0,0,0,1,0,1,0,1
+Result grids should include all the specified columns with correct values.,68,1,0,0,0,1,0,0,0
+Ascending and descending sorting functionality should work for columns supported by data sorting.,69,0,0,1,1,1,0,0,1
+Result grids should be displayed with proper column and row spacing.,70,0,1,1,0,0,1,1,1
+Pagination should be enabled when there are more results than the default result count per page.,71,0,1,0,0,0,0,1,0
+"Check for Next, Previous, First and Last page pagination functionality.",72,0,1,1,0,1,0,0,1
+Duplicate records should not be displayed in the result grid.,73,1,1,1,0,0,1,0,1
+Check if all the columns are visible and a horizontal scrollbar is enabled if necessary.,74,1,1,1,1,1,1,1,0
+Check the data for dynamic columns (columns whose values are calculated dynamically based on the other column values).,75,0,0,1,1,1,1,1,1
+For result grids showing reports check ??Totals?? row and verify the total for every column.,76,0,0,0,0,1,0,1,0
+For result grids showing reports check ??Totals?? row data when pagination is enabled and the user gets navigated to the next page.,77,1,0,1,1,1,0,1,1
+Check if proper symbols are used for displaying column values e.g. % symbol should be displayed for percentage calculation.,78,0,1,0,1,1,1,1,1
+Check result grid data to know if the date range is enabled.,79,0,0,1,1,1,0,1,0
+Test Scenarios For A Window,80,1,1,0,1,0,0,0,0
+Check if the default window size is correct.,81,0,0,0,1,0,1,0,0
+Check if the child window size is correct.,82,1,0,0,0,1,0,0,0
+"Check if there is any field on the page with default focus (in general, the focus should be set on the first input field of the screen).",83,0,0,0,1,1,1,0,0
+Check if child windows are getting closed on closing parent/opener window.,84,0,1,0,0,0,1,0,0
+"If the child window is opened, the user should not be able to use or update any field in the background or parent window",85,0,1,1,0,1,1,1,1
+"Check window minimize, maximize, and close functionality.",86,0,0,1,0,1,0,1,0
+Check if the window is re-sizable.,87,1,0,0,0,1,1,1,0
+Check scroll bar functionality for parent and child windows.,88,0,1,1,1,1,0,1,0
+Check cancel button functionality for the child window.,89,1,1,1,1,1,0,0,1
+Check if correct data is getting saved in the database upon a successful page submit.,90,1,1,0,0,1,0,1,1
+Check values for columns that are not accepting null values.,91,1,1,1,1,0,1,1,0
+Check for data integrity. Data should be stored in single or multiple tables based on the design.,92,0,1,0,1,0,0,0,0
+Index names should be given as per the standards e.g. IND_<Tablename>_<ColumnName>,93,1,0,1,0,1,0,1,0
+Tables should have a primary key column.,94,0,0,0,0,0,1,0,0
+"Table columns should have description information available (except for audit columns like created date, created by, etc.)",95,1,1,0,1,1,0,0,1
+For every database add/update operation log should be added.,96,1,1,1,1,0,1,1,1
+Required table indexes should be created.,97,1,1,0,0,1,0,0,0
+Check if data is committed to the database only when the operation is successfully completed.,98,0,0,1,1,0,0,0,1
+Data should be rolled back in case of failed transactions.,99,0,0,0,0,1,1,1,1
+"Database name should be given as per the application type i.e. test, UAT, sandbox, live (though this is not a standard it is helpful for database maintenance)",100,0,1,1,0,0,1,1,1
+Database logical names should be given according to the database name (again this is not standard but helpful for DB maintenance).,101,1,0,1,1,1,0,1,0
+Stored procedures should not be named with a prefix ??sp_??,102,1,1,0,0,0,1,0,0
+"Check if values for table audit columns (like created date, created by, updated, updated by, is deleted, deleted data, deleted by, etc.) are populated properly.",103,0,0,1,1,0,1,1,1
+Check if input data is not truncated while saving. Field length shown to the user on the page and in database schema should be the same.,104,1,1,1,0,0,1,0,0
+"Check numeric fields with minimum, maximum, and float values.",105,1,1,1,0,1,0,0,0
+Check numeric fields with negative values (for both acceptance and non-acceptance).,106,0,1,1,1,0,0,0,0
+Check if the radio button and drop-down list options are saved correctly in the database.,107,1,0,1,1,0,0,0,1
+Check if the database fields are designed with the correct data type and data length.,108,1,1,1,1,0,1,0,0
+"Check if all the table constraints like a Primary key, Foreign key, etc. are implemented correctly.",109,1,1,0,0,0,1,0,0
+Test stored procedures and triggers with sample input data.,110,0,0,0,0,0,1,0,0
+Input field leading and trailing spaces should be truncated before committing data to the database.,111,1,0,1,1,1,1,0,1
+Null values should not be allowed for the Primary key column.,112,1,1,1,1,0,1,0,0
+Check for uploaded image path.,113,0,1,0,0,1,0,1,0
+Check image upload and change functionality.,114,0,0,0,0,0,0,0,0
+"Check image upload functionality with image files of different extensions (For Example, JPEG, PNG, BMP, etc.)",115,1,0,0,1,1,0,0,1
+Check image upload functionality with images having space or any other allowed special character in the file name.,116,0,0,0,1,1,1,1,0
+Check duplicate name image upload.,117,0,1,0,0,1,0,0,0
+Check image upload with image size greater than the max allowed size. The Proper error message should be displayed.,118,0,1,0,1,0,1,0,1
+"Check image upload functionality with file types other than images (For Example, txt, doc, pdf, exe, etc.). A proper error message should be displayed.",119,1,1,0,1,1,0,1,1
+Check if images of specified height and width (if defined) are accepted otherwise rejected.,120,1,1,1,0,0,1,0,1
+The image upload progress bar should appear for large size images.,121,0,0,1,1,1,1,0,0
+Check if the cancel button functionality is working in between the upload process.,122,1,0,0,0,1,0,1,1
+Check if file selection dialog shows only supported files listed.,123,0,1,0,0,0,0,1,1
+Check multiple images upload functionality.,124,1,0,1,1,0,0,1,1
+Check image quality after upload. Image quality should not be changed after upload.,125,0,1,0,1,0,0,1,1
+The email template should use standard CSS for all emails.,126,0,0,1,0,0,1,0,0
+Email addresses should be validated before sending emails.,127,0,1,0,0,1,0,0,1
+Special characters in the email body template should be handled properly.,128,1,1,0,1,1,1,0,1
+"Language-specific characters (For Example, Russian, Chinese or German language characters) should be handled properly in the email body template.",129,0,1,1,1,0,1,0,0
+Email subject should not be blank.,130,1,1,1,1,1,1,1,1
+Placeholder fields used in the email template should be replaced with actual values e.g. {Firstname} {Lastname} should be replaced with an individual??s first and last name properly for all the recipients.,131,0,0,1,0,1,1,0,0
+If reports with dynamic values are included in the email body and report data should be calculated correctly.,132,0,1,1,0,0,0,0,1
+Email sender name should not be blank.,133,1,0,0,1,1,1,1,1
+"Emails should be checked in different email clients like Outlook, Gmail, Hotmail, Yahoo! mail, etc.",134,0,1,0,0,0,1,0,0
+"Check to send email functionality using TO, CC and BCC fields.",135,1,0,0,0,0,0,0,0
+Check plain text emails.,136,1,0,1,0,0,0,1,0
+Check HTML format emails.,137,1,1,0,0,0,1,1,1
+"Check email header and footer for company logo, privacy policy, and other links.",138,1,1,0,0,0,0,0,1
+Check emails with attachments.,139,0,0,1,0,0,1,0,0
+"Check to send email functionality to single, multiple or distribution list recipients.",140,1,0,1,0,0,0,1,1
+Check if a reply to the email address is correct.,141,1,0,1,1,0,1,0,1
+Check to send the high volume of emails.,142,1,1,0,0,1,1,1,0
+Test Scenarios For Excel Export Functionality,143,0,1,1,0,0,0,1,1
+The file should get exported in the proper file extension.,144,1,0,0,0,1,0,1,0
+"The file name for the exported Excel file should be as per the standards, For Example, if the file name is using the timestamp, it should get replaced properly with an actual timestamp at the time of exporting the file.",145,0,0,1,0,1,1,1,1
+Check for date format if exported Excel file contains the date columns.,146,0,1,0,0,1,1,0,0
+Check number formatting for numeric or currency values. Formatting should be the same as shown on the page.,147,0,0,1,0,0,1,0,1
+The exported file should have columns with proper column names.,148,1,0,0,1,1,0,0,0
+Default page sorting should be carried in the exported file as well.,149,0,0,1,1,0,0,0,0
+"Excel file data should be formatted properly with header and footer text, date, page numbers, etc. values for all pages.",150,1,1,1,1,0,0,1,0
+Check if the data displayed on a page and exported Excel file is the same.,151,0,1,0,1,0,1,1,1
+Check export functionality when pagination is enabled.,152,0,0,1,0,1,1,1,0
+"Check if the export button is showing proper icon according to the exported file type, For Example, Excel file icon for xls files",153,1,0,0,0,1,1,0,1
+Check export functionality for files with very large size.,154,0,1,1,1,1,1,1,1
+Check export functionality for pages containing special characters. Check if these special characters are exported properly in the Excel file.,155,0,1,1,0,0,1,0,1
+Performance Testing Test Scenarios,156,1,0,0,1,0,0,1,1
+Check if the page load time is within the acceptable range.,157,0,0,1,0,0,1,1,0
+Check the page load on slow connections.,158,1,1,1,0,0,1,1,1
+"Check the response time for any action under a light, normal, moderate, and heavy load conditions.",159,1,1,0,0,0,1,1,1
+Check the performance of database stored procedures and triggers.,160,0,0,1,0,0,1,0,1
+Check the database query execution time.,161,1,1,1,0,0,0,0,1
+Check for load testing of the application.,162,1,0,1,0,0,1,1,1
+Check for the Stress testing of the application.,163,1,0,1,0,0,1,1,0
+Check CPU and memory usage under peak load conditions.,164,0,1,1,0,1,0,1,0
+Security Testing Test Scenarios,165,1,1,0,0,1,0,0,1
+Check for SQL injection attacks.,166,1,0,1,0,1,1,1,1
+Secure pages should use the HTTPS protocol.,167,1,0,0,0,0,1,1,1
+Page crash should not reveal application or server info. The error page should be displayed for this.,168,1,0,1,1,1,0,0,1
+Escape special characters in the input.,169,1,0,0,0,0,1,1,0
+Error messages should not reveal any sensitive information.,170,1,1,1,0,1,1,0,1
+All credentials should be transferred over an encrypted channel.,171,1,1,1,0,0,0,0,1
+Test password security and password policy enforcement.,172,0,1,1,1,0,1,0,0
+Check application logout functionality.,173,0,0,0,1,0,1,0,1
+Check for Brute Force Attacks.,174,1,1,1,1,1,1,1,0
+Cookie information should be stored in encrypted format only.,175,1,0,0,0,0,0,1,0
+Check session cookie duration and session termination after timeout or logout.,176,0,0,0,0,1,0,0,0
+Session tokens should be transmitted over a secured channel.,177,0,0,1,0,0,1,0,0
+The password should not be stored in cookies.,178,0,0,0,0,0,1,0,1
+Test for Denial of Service attacks.,179,1,1,0,0,0,1,1,0
+Test for memory leakage.,180,0,1,1,0,1,0,1,1
+Test unauthorized application access by manipulating variable values in the browser address bar.,181,1,1,1,1,0,0,1,0
+Test file extension handing so that exe files are not uploaded and executed on the server.,182,1,1,0,0,1,0,1,1
+Sensitive fields like passwords and credit card information should not have to autocomplete enabled.,183,0,1,0,0,1,0,1,0
+File upload functionality should use file type restrictions and also anti-virus for scanning uploaded files.,184,1,0,0,1,1,0,0,1
+Check if directory listing is prohibited.,185,0,0,0,0,1,1,0,0
+Passwords and other sensitive fields should be masked while typing.,186,0,0,0,0,0,1,0,0
+Check if forgot password functionality is secured with features like temporary password expiry after specified hours and security question is asked before changing or requesting a new password.,187,1,1,0,0,0,1,0,1
+Verify CAPTCHA functionality.,188,1,0,1,0,0,0,0,1
+Check if important events are logged in log files.,189,1,0,1,1,1,0,0,1
+Check if access privileges are implemented correctly.,190,1,1,0,0,0,0,1,0
+environment to be production,191,1,1,1,1,0,1,1,1
+Verify successful user login with valid credentials.,192,0,0,0,1,0,1,1,0
+API response must be valid and have a body,193,1,1,1,1,1,1,1,0
+Ensure invalid inputs are rejected with appropriate error messages.,194,0,1,0,1,0,0,1,1
+Test application performance under high user load.,195,1,1,1,0,1,0,1,0
+Confirm that all links and buttons navigate to the correct pages.,196,1,1,0,0,1,1,1,1
+"Validate data integrity when performing CRUD (Create, Read, Update, Delete) operations.",197,1,0,0,1,1,1,1,0
+Verify compatibility across different browsers and devices.,198,0,1,1,0,1,0,1,1
+Ensure application responsiveness on varying screen sizes.,199,0,0,1,0,1,0,0,1
+Test the accuracy of search functionality with diverse queries.,200,1,0,0,1,1,1,1,1

@@ -2,7 +2,7 @@ import re
 import string
 import pandas as pd
 import numpy as np
-import keras
+from tensorflow.keras.utils import pad_sequences
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import CountVectorizer
 
@@ -34,6 +34,7 @@ class Preprocessor(object):
         if not is_test:
             columns_to_drop = [self.config['input_id_column'], self.config['input_text_column']]
             Y = data_frame.drop(columns=columns_to_drop, axis=1).values
+
         else:
             Y = data_frame.Test_ID.values
         return X, Y
@@ -108,9 +109,9 @@ class Preprocessor(object):
             indsent = [self.word2ind.get(i, self.word2ind['<unk>']) for i in sent]
             test_x_ids.append(indsent)
 
-        data_x_ids = keras.preprocessing.sequence.pad_sequences(data_x_ids, maxlen=self.config['maxlen'], padding='post', value=self.word2ind['<pad>'])
-        validate_x_ids = keras.preprocessing.sequence.pad_sequences(validate_x_ids, maxlen=self.config['maxlen'], padding='post', value=self.word2ind['<pad>'])
-        test_x_ids = keras.preprocessing.sequence.pad_sequences(test_x_ids, maxlen=self.config['maxlen'], padding='post', value=self.word2ind['<pad>'])
+        data_x_ids = pad_sequences(data_x_ids, maxlen=self.config['maxlen'], padding='post', value=self.word2ind['<pad>'])
+        validate_x_ids = pad_sequences(validate_x_ids, maxlen=self.config['maxlen'], padding='post', value=self.word2ind['<pad>'])
+        test_x_ids = pad_sequences(test_x_ids, maxlen=self.config['maxlen'], padding='post', value=self.word2ind['<pad>'])
 
         data_x_ids = np.array(data_x_ids)
         validate_x_ids = np.array(validate_x_ids)

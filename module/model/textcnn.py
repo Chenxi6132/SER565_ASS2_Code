@@ -1,5 +1,7 @@
+from keras.backend import binary_crossentropy, categorical_crossentropy
 from keras.models import Sequential
 from keras.layers import Embedding, Conv1D, MaxPooling1D, Dense, Flatten, Dropout
+from tensorflow.keras.optimizers import Adam
 
 class TextCNN(object):
     def __init__(self, classes, config):
@@ -17,12 +19,12 @@ class TextCNN(object):
         model.add(MaxPooling1D())
         model.add(Conv1D(self.config['filters_3'], self.config['cnn_kernel_size'], activation='relu', padding='same'))
         model.add(MaxPooling1D())
-        model.add(MaxPooling1D())
         model.add(Flatten())
         model.add(Dense(128, activation='relu'))
-        model.add(Dense(self.num_class, activation=None))
+        model.add(Dropout(self.config['dropout_rate']))
         model.add(Dense(self.num_class, activation='sigmoid'))
-        model.compile(optimizer='adam', loss='BinaryCrossentropy', metrics='accuracy')
+        optimizer = Adam(learning_rate=self.config['learning_rate'])
+        model.compile(optimizer=optimizer, loss='binary_crossentropy', metrics='accuracy')
         model.summary()
         return model
 

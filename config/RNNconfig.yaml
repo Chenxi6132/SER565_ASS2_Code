@@ -1,96 +1,50 @@
+predict:
+  calibrator_type: platt_scaling
+  calibrators_output_path: ./output
+  classes:
+    - Functionality_Test_Case
+    - User_Interface_Test_Case
+    - Performance_Test_Case
+    - Integration_Test_Case
+    - Usability_Test_Case
+    - Database_Test_Case
+    - Security_Test_Case
+    - User_Acceptance_Test_Case
+  debug_validation: false
+  enable_calibration: true
+  output_path: ./data/result.csv
 preprocessing:
-  split_ratio: 0.3
-  input_trainset: ./data/emotion_train.csv
-  input_testset: ./data/emotion_test.csv
-  random_seed: 0
   batch_size: 32
   classes:
-    - anger
-    - boredom
-    - enthusiasm
-    - fun
-    - happiness
-    - hate
-    - love
-    - neutral
-    - relief
-    - sadness
-    - surprise
-    - worry
+    - Functionality_Test_Case
+    - User_Interface_Test_Case
+    - Performance_Test_Case
+    - Integration_Test_Case
+    - Usability_Test_Case
+    - Database_Test_Case
+    - Security_Test_Case
+    - User_Acceptance_Test_Case
   embedding_dim: 100
   input_convertor: nn_vectorization
   input_id_column: Test_ID
+  input_trainset: ./data/HD_test.csv
+  input_testset: ./data/HD_train.csv
   input_text_column: Description
   maxlen: 128
+  random_seed: 0
   skip_tokenization: false
-
-
+  split_ratio: 0.3
 training:
   batch_normalization: true
   batch_size: 32
   dropout_rate: 0.5
   embedding_dim: 100
-  epochs: 20
+  epochs: 10
   gradient_cliping: true
-  learning_rate: 0.02
+  learning_rate: 0.005700707318366819
   maxlen: 128
   model_name: textrnn
   optimizer: sgd
   output_path: ./output
   predict_only: false
-  rnn_units: 64
-
-predict:
-  output_path: ./data/result.csv
-  enable_calibration: true
-  calibrator_type: platt_scaling
-  calibrators_output_path: ./output
-  debug_validation: false
-  classes:
-    - anger
-    - boredom
-    - enthusiasm
-    - fun
-    - happiness
-    - hate
-    - love
-    - neutral
-    - relief
-    - sadness
-    - surprise
-    - worry
-
-#######Test Cases########  .csv  HD_train.csv
-#    - Functionality_Test_Case
-#    - User_Interface_Test_Case
-#    - Performance_Test_Case
-#    - Integration_Test_Case
-#    - Usability_Test_Case
-#    - Database_Test_Case
-#    - Security_Test_Case
-#    - User_Acceptance_Test_Case
-
-
-
-####### Emotional dataset ############### emotion_test.csv  emotion_train.csv
-#  - anger
-#  - boredom
-#  - enthusiasm
-#  - fun
-#  - happiness
-#  - hate
-#  - love
-#  - neutral
-#  - relief
-#  - sadness
-#  - surprise
-#  - worry
-
-####### MultiLabel dataset ############### multiLabel_test.csv  multiLabel_train.csv
-#  - Computer Science
-#  - Physics
-#  - Mathematics
-#  - Statistics
-#  - Quantitative Biology
-#  - Quantitative Finance
-
+  rnn_units: 20
